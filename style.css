@@ -43,7 +43,7 @@ header a {
     height: 0.25em;
     width: 100%;
     background: var(--text-color);
-    border-radius: 0.2em;
+    border-radius: 0.1em;
     left: 0;
     transform: rotate(0deg);
     transition: .25s ease-in-out;
