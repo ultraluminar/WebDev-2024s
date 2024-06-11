@@ -1,0 +1,133 @@
+/* Header */
+header {
+    position: sticky;
+    display: flex;
+    top: 0; /* At the top of the page */
+    z-index: 3;
+    background: var(--background-grey);
+    padding: 12px 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header>div {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+    
+#logo-text {
+    font-family: 'Rubik Scribble', cursive;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Burger Menu */
+#burger-menu {
+    display: block;
+    position: relative;
+    width: 1.7em;
+    height: 1.5em;
+    cursor: pointer;
+}
+
+#burger-menu>span {
+    display: block;
+    position: absolute;
+    height: 0.25em;
+    width: 100%;
+    background: var(--text-color);
+    border-radius: 0.2em;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+#burger-menu span:nth-child(1) {
+    top: 0;
+}
+
+#burger-menu span:nth-child(2), 
+#burger-menu span:nth-child(3) {
+    top: 0.65em;
+}
+
+#burger-menu span:nth-child(4) {
+    top: 1.3em;
+}
+
+#burger-menu.open span:nth-child(1) {
+    top: 0.65em;
+    width: 0%;
+    left: 50%;
+}
+
+#burger-menu.open span:nth-child(2) {
+    transform: rotate(45deg);
+    width: 110%;
+}
+
+#burger-menu.open span:nth-child(3) {
+    transform: rotate(-45deg);
+    width: 110%;
+}
+
+#burger-menu.open span:nth-child(4) {
+    top: 0.65em;
+    width: 0%;
+    left: 50%;
+}
+
+/* Navigation */
+/* Mobile */
+nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--background-grey);
+    overflow: hidden;
+    z-index: 2;
+    transition: .3s ease-in-out;
+}
+
+nav.open {
+    width: 40%;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    height: 100%;
+    list-style: none;
+}
+
+nav ul li a {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    white-space: nowrap;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+nav.open ul li a {
+    opacity: 1;
+}
+
+/* TODO: Desktop */
