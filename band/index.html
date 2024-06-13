@@ -3,23 +3,23 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="/nav.js"></script>
-        <link rel="stylesheet" href="/shared.css">
-        <link rel="stylesheet" href="/layout.css">
-        <link rel="stylesheet" href="/band/band.css">
-        <link rel="icon" href="assets/favicon.ico" sizes="32x32">
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16.png">
+        <script src="../nav.js"></script>
+        <link rel="stylesheet" href="../shared.css">
+        <link rel="stylesheet" href="../layout.css">
+        <link rel="stylesheet" href="../band/band.css">
+        <link rel="icon" href="../assets/favicon.ico" sizes="32x32">
+        <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16.png">
         <!-- Not veasable to turn our logo into svg -->
         <!-- <link rel="icon" href="/icon.svg" type="image/svg+xml"> -->
-        <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"><!-- 180×180 -->
-        <link rel="manifest" href="/assets/favicon/manifest.json">
+        <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png"><!-- 180×180 -->
+        <link rel="manifest" href="../assets/favicon/manifest.json">
         <title>Die Band - Krakatoa</title>
     </head>
     <body>
         <header>
             <div>
-                <a href="/"><img src="/assets/main_logo/main_logo_128.png" alt="main logo" height="45"></a>
+                <a href="/"><img src="../assets/main_logo/main_logo_128.png" alt="main logo" height="45"></a>
                 <a href="/" id="logo-text">KRAKATOA</a>
             </div>
             <a id="burger-menu">
@@ -40,10 +40,10 @@
         <aside>
             <nav id="mobile-side-nav">
                 <ul>
-                    <li><a href="/">STARTSEITE</a></li>
-                    <li><a href="/band/">DIE BAND</a></li>
-                    <li><a href="index.html">SHOP</a></li>
-                    <li><a href="index.html">TOUR</a></li>
+                    <li><a href="../">STARTSEITE</a></li>
+                    <li><a href=".">DIE BAND</a></li>
+                    <li><a href="../shop/">SHOP</a></li>
+                    <li><a href="../tour/">TOUR</a></li>
                 </ul>
             </nav>
         </aside>
@@ -61,7 +61,7 @@
                         <a href="#members" class="link-button bg-secondary">Die Bandmitglieder</a>
                     </div>
                 </div>
-                <img class="hero-image" src="/assets/band/main_logo_cutout_optimized.webp" alt="Band-logo">
+                <img class="hero-image" src="../assets/band/main_logo_cutout_optimized.webp" alt="Band-logo">
             </section>
             <section id="story" class="content-section">
                 <h2 class="section-head">Unsere Story</h2>
@@ -81,14 +81,14 @@
                 </div>
                 <div class="section-footer">
                     <p>Tickets für unsere Konzerte kannst du direkt hier auf unserer Website kaufen.</p>
-                    <a href="index.html" class="link-button bg-primary">Tickets kaufen</a>
+                    <a href="../shop/#tickets" class="link-button bg-primary">Tickets kaufen</a>
                 </div>
             </section>
             <section id="members" class="content-section">
                 <h2 class="section-head">Die Bandmitglieder</h2>
                 <div class="section-body">
                     <div class="member-card">
-                        <img class="member-card-image" src="/assets/band/Benni_card_optimized.webp" alt="Bandmitglied 1">
+                        <img class="member-card-image" src="../assets/band/Benni_card_optimized.webp" alt="Bandmitglied 1">
                         <div class="member-card-filter">
                             <h3>Benni "Feuervogel" Becker</h3>
                         </div>
@@ -100,7 +100,7 @@
                         </p>
                     </div>
                     <div class="member-card">
-                        <img class="member-card-image" src="/assets/band/alex_card_optimized.webp" alt="Bandmitglied 2">
+                        <img class="member-card-image" src="../assets/band/alex_card_optimized.webp" alt="Bandmitglied 2">
                         <div class="member-card-filter">
                             <h3>Alex "Asche" Sturm</h3>
                         </div>
@@ -111,7 +111,7 @@
                         </p>
                     </div>
                     <div class="member-card">
-                        <img class="member-card-image" src="/assets/band/mia_card_optimized.webp" alt="Bandmitglied 3">
+                        <img class="member-card-image" src="../assets/band/mia_card_optimized.webp" alt="Bandmitglied 3">
                         <div class="member-card-filter">
                             <h3>Mia "Magma" Müller</h3>
                         </div>
@@ -122,7 +122,7 @@
                         </p>
                     </div>
                     <div class="member-card">
-                        <img class="member-card-image" src="/assets/band/leo_card_optimized.webp" alt="Bandmitglied 4">
+                        <img class="member-card-image" src="../assets/band/leo_card_optimized.webp" alt="Bandmitglied 4">
                         <div class="member-card-filter">
                             <h3>Leo "Lava" Schneider</h3>
                         </div>
@@ -142,6 +142,17 @@
             </section>
         </main>
         <footer>
+            <p>&copy; 2024 Adrian Lösch, Lukas Klassen.<br>All rights reserved.</p>
+            <div class="socials">
+                <p>Follow us:</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank"><img src="../assets/footer/facebook-logo.svg" alt="facebook" height="32"></a>
+                    <a href="https://www.x.com" target="_blank"><img src="../assets/footer/X-logo.svg" alt="twitter" height="32"></a>
+                    <a href="https://www.instagram.com" target="_blank"><img src="../assets/footer/instagram-logo.svg" alt="instagram" height="32"></a>
+                    <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img src="../assets/footer/youtube-logo.svg" alt="youtube" height="32"></a>
+                </div>
+            </div>
+            <a class="inline-link" href="impressum.html">Impressum</a>
         </footer>
     </body>
 </html>

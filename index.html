@@ -3,23 +3,23 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="/nav.js"></script>
-        <link rel="stylesheet" href="/shared.css">
-        <link rel="stylesheet" href="/layout.css">
-        <link rel="icon" href="/assets/favicon.ico" sizes="32x32">
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16.png">
+        <script src="nav.js"></script>
+        <link rel="stylesheet" href="shared.css">
+        <link rel="stylesheet" href="layout.css">
+        <link rel="icon" href="assets/favicon/favicon.ico" sizes="32x32">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16.png">
         <!-- Not veasable to turn our logo into svg -->
         <!-- <link rel="icon" href="/icon.svg" type="image/svg+xml"> -->
-        <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"><!-- 180×180 -->
-        <link rel="manifest" href="/assets/favicon/manifest.json">
+        <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png"><!-- 180×180 -->
+        <link rel="manifest" href="assets/favicon/manifest.json">
         <title>Krakatoa - Startseite</title>
     </head>
     <body>
         <header>
             <div>
-                <a href="/"><img src="/assets/main_logo/main_logo_128.png" alt="main logo" height="45"></a>
-                <a href="/" id="logo-text">KRAKATOA</a>
+                <a href="."><img src="assets/main_logo/main_logo_128.png" alt="main logo" height="45"></a>
+                <a href="." id="logo-text">KRAKATOA</a>
             </div>
             <a id="burger-menu">
                 <span></span>
@@ -40,9 +40,9 @@
             <nav id="mobile-side-nav">
                 <ul>
                     <li><a href=".">STARTSEITE</a></li>
-                    <li><a href="/band/">DIE BAND</a></li>
-                    <li><a href="/shop/">SHOP</a></li>
-                    <li><a href=".">TOUR</a></li>
+                    <li><a href="band/">DIE BAND</a></li>
+                    <li><a href="shop/">SHOP</a></li>
+                    <li><a href="tour/">TOUR</a></li>
                 </ul>
             </nav>
         </aside>
@@ -50,7 +50,17 @@
 
         </main>
         <footer>
-
+            <p>&copy; 2024 Adrian Lösch, Lukas Klassen.<br>All rights reserved.</p>
+            <div class="socials">
+                <p>Follow us:</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank"><img src="assets/footer/facebook-logo.svg" alt="facebook" height="32"></a>
+                    <a href="https://www.x.com" target="_blank"><img src="assets/footer/X-logo.svg" alt="twitter" height="32"></a>
+                    <a href="https://www.instagram.com" target="_blank"><img src="assets/footer/instagram-logo.svg" alt="instagram" height="32"></a>
+                    <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img src="assets/footer/youtube-logo.svg" alt="youtube" height="32"></a>
+                </div>
+            </div>
+            <a class="inline-link" href="impressum.html">Impressum</a>
         </footer>
     </body>
 </html>
