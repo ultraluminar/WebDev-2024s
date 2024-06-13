@@ -1,0 +1,40 @@
+#logo-text-shop {
+    position: absolute;
+    bottom: -5px;
+    right: -25px;
+    font-size: 0.75em;
+    font-family: Ubuntu, sans-serif;
+    color: var(--secondary-color);
+
+}
+
+#icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#cart-link {
+    line-height: 0;
+    position: relative;
+}
+
+#cart-link img {
+    height: 30px;
+}
+
+#badge {
+    line-height: normal;
+    position: absolute;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 10px;
+    top: -8px;
+    right: -5px;
+    padding: 3px 5px;
+    font-size: 0.8em;
+}
+
+#badge p {
+    height: 15px;
+}
