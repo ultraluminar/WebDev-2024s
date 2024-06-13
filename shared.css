@@ -139,6 +139,10 @@ main {
 }
 
 /* Section */
+section{
+    padding: 1em;
+}
+
 .section-head{
     font-size: 1.75em;
 }
@@ -154,4 +158,12 @@ main {
     flex-direction: column;
     justify-content: center;
     gap: 1em;
+}
+
+.content-section{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    width: 100%;
 }
