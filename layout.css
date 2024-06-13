@@ -28,6 +28,37 @@ header a {
     color: var(--primary-color);
 }
 
+/* Footer */
+footer {
+    position: absolute;
+    box-sizing: border-box;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--background-grey);
+    padding: 1em;
+    gap: 1em;
+}
+
+footer p {
+    text-align: center;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1em;
+}
+
 /* Burger Menu */
 #burger-menu {
     display: block;
