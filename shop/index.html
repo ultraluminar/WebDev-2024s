@@ -3,8 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script type="module" src="/nav.js"></script>
+        <script type="module" src="../nav.js"></script>
         <script type="module" src="shop.js"></script>
+        <script type="module" src="../spinbox.js"></script>
 
         <link rel="stylesheet" href="/shared.css">
         <link rel="stylesheet" href="/layout.css">
@@ -90,7 +91,11 @@
                             <p class="product-price">19,99 €</p>
                         </div>
                         <div class="product-buttons">
-                            <input class="product-spinbox" type="number" name="product-count" min="1" max="99" value="1">
+                            <div class="custom-spinbox">
+                                <button class="spinbox-button spinbox-decrement"><img src="../assets/shop/minus.svg" alt=""></button>
+                                <input type="number" class="spinbox-input" min="1" max="99" value="1" pattern="[0-9]*">
+                                <button class="spinbox-button spinbox-increment"><img src="../assets/shop/plus.svg" alt=""></button>
+                            </div>
                             <button class="add-cart-button">In den Warenkorb</button>
                         </div>
                     </div>

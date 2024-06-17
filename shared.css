@@ -167,3 +167,52 @@ section{
     gap: 1.5em;
     width: 100%;
 }
+
+/* Spinbox */
+.custom-spinbox{
+    display: flex;
+    flex-direction: row;
+    gap: 0.25em;
+    align-items: center;
+    border-radius: 0.5em;
+    padding: 0.3em;
+    background-color: var(--secondary-color-light);
+}
+
+.spinbox-button{
+    padding: 0.7em;
+    border: none;
+    border-radius: 0.5em;
+    background-color: #00000000;
+    color: var(--text-color);
+    transition: 0.2s ease-in-out;
+    line-height: 0;
+    height: 3em;
+}
+
+.spinbox-button:hover{
+    background-color: #ffffff58;
+}
+
+.spinbox-button img{
+    width: 100%;
+    height: 100%;
+}
+
+.spinbox-input{
+    border: none;
+    background-color: #00000000;
+    font-size: 1.2em;
+    font-weight: bold;
+    max-width: 2em;
+    text-align: center;
+}
+
+.spinbox-input::-webkit-inner-spin-button,
+.spinbox-input::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+}
+
+.spinbox-input:focus{
+    outline: none;
+}
