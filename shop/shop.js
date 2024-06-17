@@ -33,11 +33,11 @@ class Order {
 let order = new Order();
 
 document.querySelectorAll(".add-cart-button").forEach((button) => {
-    let spinbox = button.parentElement.button_div.querySelector(".product-spinbox");
+    let spinbox = button.parentElement.querySelector(".product-spinbox");
     let product_id = button.parentElement.parentElement.id;
 
     button.addEventListener("click", () => {
-        order.add(id, spinbox.value);
+        order.add(product_id, parseInt(spinbox.value));
         order.save();
     });
 });
