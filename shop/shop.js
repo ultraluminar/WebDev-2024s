@@ -1,24 +1,22 @@
 class Order {
     constructor(){
         this.key = "order";
+        this.badge = document.querySelector("#badge");
 
-        if (document.cookie === ""){
-            this.order = {}
-            this.count = 0;
-            console.log("Cookie empty, count = 0");
-        } else {
-            let order_string = document.cookie.replace(`${this.key}=`, '');
-            this.order = JSON.parse(order_string);
-            // this.count = 0
-            this.count = Object.values(this.order).reduce((a, b) => a + b, 0);
-            console.log(`Cookie not empty, count = ${this.count}`);
+        if (document.cookie == ""){
+            this.order = {};
+            return;
         }
+        
+        let order_string = document.cookie.replace(`${this.key}=`, '');
+        this.order = JSON.parse(order_string);
+
+        let count = Object.values(this.order).reduce((a, b) => a + b);
+        this.appendBadge(count);
     }
 
-    add(item, count=1){
-        this.order[item] = (this.order[item] || 0) + count;
-        this.count = this.count + count;
-        console.log(`+${count} => ${this.count}`);
+    appendBadge(count){
+        this.badge.innerHTML = parseInt(this.badge.innerHTML) + count;
     }
 
     save(){
@@ -26,14 +24,20 @@ class Order {
         document.cookie = `${this.key}=${order_string}`;
     }
 
+    add(id, count = 1){
+        this.order[id] = (this.order[id] || 0) + count;
+        this.appendBadge(count);
+    }
 }
 
-let order = new Order("order");
+let order = new Order();
 
-order.add(6);
-order.add(6);
+document.querySelectorAll(".add-cart-button").forEach((button) => {
+    let spinbox = button.parentElement.button_div.querySelector(".product-spinbox");
+    let product_id = button.parentElement.parentElement.id;
 
-order.add(4, 15);
-
-
-order.save();
+    button.addEventListener("click", () => {
+        order.add(id, spinbox.value);
+        order.save();
+    });
+});
