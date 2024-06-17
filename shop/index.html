@@ -77,18 +77,21 @@
             <section id="merch" class="content-section">
                 <h2 class="section-head">Merch</h2>
                 <div class="section-body">
-                    <div class="product-card">
-                        <img src="../assets/shop/merch/merch_1.webp" alt="TODO: alt description">
+                    <div class="product-card" id="1">
+                        <img src="../assets/shop/merch/merch_1.webp" alt="TODO: alt description" class="product-image">
                         <div class="product-info">
                             <h3 class="product-title">Produkt 1</h3>
                             <p class="product-description">
-                                Beschreibung des Produk
+                                Beschreibung des Produkts<br>
+                                Und das steht hier so drin, damit die Beschreibung vielleicht noch ein bisschen länger wird.<br>
+                                Und jetzt gibts noch ein bisschen mehr Text.<br>
+                                Und noch ne Zeile.
                             </p>
                             <p class="product-price">19,99 €</p>
                         </div>
                         <div class="product-buttons">
-                            <!-- TODO: Spinbox -->
-                            <button class="button-primary">In den Warenkorb</button>
+                            <input class="product-spinbox" type="number" name="product-count" min="1" max="99" value="1">
+                            <button class="add-cart-button">In den Warenkorb</button>
                         </div>
                     </div>
                 </div>
