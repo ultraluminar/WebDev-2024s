@@ -18,22 +18,22 @@ class Order {
     appendBadge(count){
         this.badge.innerHTML = parseInt(this.badge.innerHTML) + count;
     }
+    
+    add(id, count = 1){
+        this.order[id] = (this.order[id] || 0) + count;
+        this.appendBadge(count);
+    }
 
     save(){
         let order_string = JSON.stringify(this.order);
         document.cookie = `${this.key}=${order_string}`;
-    }
-
-    add(id, count = 1){
-        this.order[id] = (this.order[id] || 0) + count;
-        this.appendBadge(count);
     }
 }
 
 let order = new Order();
 
 document.querySelectorAll(".add-cart-button").forEach((button) => {
-    let spinbox = button.parentElement.querySelector(".product-spinbox");
+    let spinbox = button.parentElement.querySelector(".spinbox-input");
     let product_id = button.parentElement.parentElement.id;
 
     button.addEventListener("click", () => {
