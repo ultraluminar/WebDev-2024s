@@ -1,15 +1,13 @@
 import { Cart } from "./cart.js";
+import { ProductCard } from "./product-card.js";
 
 const cart = new Cart();
 
-//TODO: generate product tiles
+const parent = document.getElementById("merch").querySelector(".section-body")
+const img_src = "../assets/shop/merch/merch_1.webp";
+const id = 69
 
-document.querySelectorAll(".add-cart-button").forEach((button) => {
-    let spinbox = button.parentElement.querySelector(".spinbox-input");
-    let product_id = button.parentElement.parentElement.id;
-
-    button.addEventListener("click", () => {
-        cart.add(product_id, parseInt(spinbox.value));
-        cart.save();
-    });
-});
+const card = new ProductCard(
+    parent, id, img_src, "TODO: alt", `Product ${id}`,
+    "TODO: Beschreibung", "420.69€", cart
+);
