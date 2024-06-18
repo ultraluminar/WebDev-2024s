@@ -1,13 +1,12 @@
-import { Cart } from "./cart.js";
-import { ProductCard } from "./product-card.js";
+import { createCard } from "./product-card.js";
+import { prices } from "./prices.js";
 
-const cart = new Cart();
-
-const parent = document.getElementById("merch").querySelector(".section-body")
+const parent = document.querySelector("#merch");
+console.log(document);
 const img_src = "../assets/shop/merch/merch_1.webp";
-const id = 69
+const img_alt = "TODO: alt";
+const description = "TODO: Beschreibung";
 
-const card = new ProductCard(
-    parent, id, img_src, "TODO: alt", `Product ${id}`,
-    "TODO: Beschreibung", "420.69€", cart
-);
+for (let id = 0; id <= 10; id++){
+    createCard(parent, id, `Product #${id}`, description, `${prices[id]}€`, img_src, img_alt);
+}

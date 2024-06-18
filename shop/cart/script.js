@@ -1,20 +1,28 @@
 import { Cart } from "../cart.js";
+import { prices } from "../prices.js";
 
 const table = document.getElementById("order-table");
 
-const header_row = table.insertRow();
-const header_data = ["Item", "Price"];
-header_data.forEach((data) => {
-    header_row.insertCell().outerHTML = '<th>' + data + '</th>';
-});
+function createRow(...values){
+    const row = table.insertRow();
+    values.forEach((value) => {
+        row.insertCell().textContent = value;
+    });
+    
+}
 
-const cart = new Cart();
+
 
 let sum = 0;
-Object.entries(cart.order).forEach((keyvalue) => {
-    const row = table.insertRow();
-    keyvalue.forEach((field) => {
-        const cell = row.insertCell();
-        cell.textContent = field;
-    });
+const cart = new Cart();
+
+createRow("Item", "Count", "One", "Sum");
+
+Object.entries(cart.order).forEach(([id, count]) => {
+    let product_sum = prices[id] * count;
+    sum += product_sum;
+
+    createRow(id, count, prices[id], `${product_sum} €`);
 });
+
+createRow("Gesammt", "", "", `${sum} €`);

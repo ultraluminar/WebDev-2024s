@@ -1,5 +1,15 @@
-export class ProductCard {
-    constructor(parent, id, img_src, img_alt, title, description, price, cart){
+import { Cart } from "./cart.js";
+
+const cart = new Cart();
+
+function create(tagName, parent, _class){
+    const element = document.createElement(tagName);
+    if (_class !== undefined) element.classList.add(_class);
+    parent.appendChild(element);
+    return element;
+}
+
+export function createCard(parent, id, title, description, price, img_src, img_alt){
         const card = create("div", parent, "product-card")
         card.id = id;
 
@@ -41,11 +51,11 @@ export class ProductCard {
                         plus.alt = "Plus Symbol";
 
                     button_decrement.addEventListener('click', () => {
-                        input.value = Math.max(parseInt(input.value) - 1, 1);
+                        input.value = Math.max(parseInt(input.value || 0) - 1, 1);
                     });
 
                     button_increment.addEventListener('click', () => {
-                        input.value = Math.min(parseInt(input.value) + 1, 99);
+                        input.value = Math.min(parseInt(input.value || 0) + 1, 99);
                     });
 
                     input.addEventListener('input', () => {
@@ -60,12 +70,4 @@ export class ProductCard {
                     cart.add(id, parseInt(input.value));
                     cart.save();
                 });
-    }
-}
-
-function create(tagName, parent, _class){
-    const element = document.createElement(tagName);
-    if (_class !== undefined) element.classList.add(_class);
-    parent.appendChild(element);
-    return element;
 }
