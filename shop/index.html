@@ -3,32 +3,33 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script type="module" src="../nav.js"></script>
-        <script type="module" src="shop.js"></script>
-        <script type="module" src="../spinbox.js"></script>
 
-        <link rel="stylesheet" href="/shared.css">
-        <link rel="stylesheet" href="/layout.css">
+        <link rel="stylesheet" href="../shared.css">
+        <link rel="stylesheet" href="../layout.css">
         <link rel="stylesheet" href="shop.css">
 
-        <link rel="icon" href="/assets/favicon.ico" sizes="32x32">
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16.png">
+        <script type="module" src="../nav.js"></script>
+        <script type="module" src="./spinbox.js"></script>
+        <script type="module" src="script.js"></script>
+
+        <link rel="icon" href="../assets/favicon.ico" sizes="32x32">
+        <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16.png">
         <!-- Not veasable to turn our logo into svg -->
         <!-- <link rel="icon" href="/icon.svg" type="image/svg+xml"> -->
-        <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"><!-- 180×180 -->
-        <link rel="manifest" href="/assets/favicon/manifest.json">
+        <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png"><!-- 180×180 -->
+        <link rel="manifest" href="../assets/favicon/manifest.json">
         <title>Krakatoa - Shop</title>
     </head>
     <body>
         <header>
             <div>
-                <a href="/"><img src="/assets/main_logo/main_logo_128.png" alt="TODO: alt description" height="45"></a>
-                <a href="/" id="logo-text">KRAKATOA<span id="logo-text-shop">SHOP</span></a>
+                <a href="../"><img src="../assets/main_logo/main_logo_128.png" alt="TODO: alt description" height="45"></a>
+                <a href="../" id="logo-text">KRAKATOA<span id="logo-text-shop">SHOP</span></a>
             </div>
             <div id="icons">
-                <a id="cart-link" href="cart.html">
-                    <img src="/assets/shop/shopping_cart.svg"/><!-- TODO: alt -->
+                <a id="cart-link" href="./cart/">
+                    <img src="../assets/shop/shopping_cart.svg"/><!-- TODO: alt -->
                     <div id="badge">
                         0
                     </div>
@@ -121,7 +122,7 @@
                     <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img src="../assets/footer/youtube-logo.svg" alt="youtube" height="32"></a>
                 </div>
             </div>
-            <a class="inline-link" href="impressum.html">Impressum</a>
+            <a class="inline-link" href="../impressum.html">Impressum</a>
         </footer>
     </body>
 </html>
