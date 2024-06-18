@@ -5,6 +5,7 @@ export class Cart {
 
         if (document.cookie == ""){
             this.order = {};
+            this.count = 0;
             return;
         }
         
@@ -12,16 +13,18 @@ export class Cart {
         this.order = JSON.parse(order_string);
 
         let count = Object.values(this.order).reduce((a, b) => a + b);
-        this.setBadge(count);
+        if (parseInt(this.badge.innerHTML) !== count) this.setBadge(count);
     }
 
     setBadge(count){
+        this.count = count
         this.badge.innerHTML = count;
     }
     
     add(id, count = 1){
         this.order[id] = (this.order[id] || 0) + count;
-        this.setBadge(this.order[id]);
+        this.setBadge(this.count + count);
+
     }
 
     save(){
