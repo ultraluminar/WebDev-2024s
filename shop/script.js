@@ -1,12 +1,17 @@
 import { createCard } from "./product-card.js";
-import { prices } from "./prices.js";
+import { product_details } from "./product_details.js";
 
 const parent = document.querySelector("#merch");
-console.log(document);
-const img_src = "../assets/shop/merch/merch_1.webp";
-const img_alt = "TODO: alt";
-const description = "TODO: Beschreibung";
+console.log(product_details);
 
-for (let id = 0; id <= 10; id++){
-    createCard(parent, id, `Product #${id}`, description, `${prices[id]}€`, img_src, img_alt);
-}
+product_details.forEach((product) => {
+    createCard(
+        parent,
+        product.id,
+        product.title,
+        product.description,
+        `${product.price}€`,
+        product.img_src,
+        product.img_alt
+    )
+});

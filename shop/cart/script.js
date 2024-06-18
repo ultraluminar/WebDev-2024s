@@ -1,5 +1,5 @@
 import { Cart } from "../cart.js";
-import { prices } from "../prices.js";
+import { product_details } from "../product_details.js";
 
 const table = document.getElementById("order-table");
 
@@ -19,10 +19,10 @@ const cart = new Cart();
 createRow("Item", "Count", "One", "Sum");
 
 Object.entries(cart.order).forEach(([id, count]) => {
-    let product_sum = prices[id] * count;
+    let product_sum = product_details[id].price * count;
     sum += product_sum;
 
-    createRow(id, count, prices[id], `${product_sum} €`);
+    createRow(id, count, product_details[id].price, `${product_sum} €`);
 });
 
 createRow("Gesammt", "", "", `${sum} €`);
