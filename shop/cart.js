@@ -43,10 +43,10 @@ export class Cart {
             let sum = 0;
             Object.entries(this.order).forEach(([id, count]) => {
                 sum += this.product_details[id].price * count;
-
-                // TODO: round
-                this.sub_total.textContent = `${sum}€`;
-                this.total.textContent = `${sum}€`;
+                sum_rounded = sum.toFixed(2);
+                
+                this.sub_total.textContent = `${sum_rounded}€`;
+                this.total.textContent = `${sum_rounded}€`;
             });
         }
     }
