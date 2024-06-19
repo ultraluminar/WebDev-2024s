@@ -1,7 +1,16 @@
 export class Cart {
-    constructor(){
+    constructor(on_save){
         this.key = "order";
         this.badge = document.getElementById("badge");
+        
+        if (on_save){
+            this.sub_total = on_save.sub_total;
+            this.total = on_save.total;
+            this.product_details = on_save.product_details;
+            this.callback = true;
+        } else {
+            this.callback = false;
+        }
 
         if (document.cookie === ""){
             this.order = {};
@@ -18,6 +27,7 @@ export class Cart {
         } else {
             this.setBadge(0);
         }
+        this.save();
     }
 
     setBadge(count){
@@ -28,6 +38,16 @@ export class Cart {
     save(){
         let order_string = JSON.stringify(this.order);
         document.cookie = `${this.key}=${order_string};path=/`;
+
+        if (this.callback){
+            let sum = 0;
+            Object.entries(this.order).forEach(([id, count]) => {
+                sum += this.product_details[id].price * count;
+
+                this.sub_total.textContent = `${sum}€`;
+                this.total.textContent = `${sum}€`;
+            });
+        }
     }
 
     set(id, count){

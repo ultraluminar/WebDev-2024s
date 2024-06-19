@@ -1,6 +1,5 @@
 import { Cart } from "./cart.js";
 
-const cart = new Cart();
 
 function create(tagName, parent, _class){
     const element = document.createElement(tagName);
@@ -77,7 +76,7 @@ function createSpinBox(parent, path_assets, minus_event = () => {}, plus_event =
     return spinbox;
 }
 
-export function createCartCard(parent, id, title, description, price, img_src, img_alt){
+export function createCartCard(cart, parent, id, title, description, price, img_src, img_alt){
     const cart_card = create("div", parent, "cart-card");
     cart_card.id = id;
 
@@ -125,7 +124,7 @@ export function createCartCard(parent, id, title, description, price, img_src, i
 
 }
 
-export function createCard(parent, id, title, description, price, img_src, img_alt){
+export function createCard(cart, parent, id, title, description, price, img_src, img_alt){
     const card = create("div", parent, "product-card")
     card.id = id;
 
