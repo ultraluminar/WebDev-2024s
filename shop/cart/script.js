@@ -1,26 +1,17 @@
-import { Cart } from "../cart.js";
-import { product_details } from "../product_details.js";
+import { Cart,  } from "../cart.js";
+import { createCartCard } from "../product-card.js";
+import { getProductDetails } from "../product_details.js";
 
-const table = document.getElementById("order-table");
-
-function createRow(...values){
-    const row = table.insertRow();
-    values.forEach((value) => {
-        row.insertCell().textContent = value;
-    });
-    
-}
+const parent = document.querySelector("#bestellungen").querySelector(".section-body");
 
 let sum = 0;
 const cart = new Cart();
-
-createRow("Item", "Count", "One", "Sum");
+const product_details = getProductDetails("../../assets");
 
 Object.entries(cart.order).forEach(([id, count]) => {
-    let product_sum = product_details[id].price * count;
+    let product = product_details[id];
+    createCartCard(parent, ...Object.values(product));
+
+    let product_sum = product.price * count;
     sum += product_sum;
-
-    createRow(id, count, product_details[id].price, `${product_sum} €`);
 });
-
-createRow("Gesammt", "", "", `${sum} €`);
