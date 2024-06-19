@@ -49,9 +49,13 @@ body {
     padding-bottom: 200px;
 }
 
+@media screen and (min-width: 1250px) {
+    body {
+        font-size: 1.2em;
+    }  
+}
+
 main {
-    display: flex;
-    flex-direction: column;
     margin: 2em 4%;
     gap: 3em;
 }
@@ -88,6 +92,7 @@ section{
 
 /* Hero */
 .hero{
+    grid-area: hero;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
@@ -124,11 +129,32 @@ section{
     width: 100%;
 }
 
+@media screen and (min-width: 900px) {
+    .hero {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2em;
+    }
+
+    .hero-image {
+        width: 50%;
+        max-width: fit-content;
+        max-height: 100vh;
+    }
+
+    .hero-text {
+        width: 50%;
+        max-width: 500px;
+    }
+}
+
+
 /* Buttons */
 .link-button {
     display: block;
     padding: 0.8em 0;
     width: 100%;
+    max-width: 30em;
     border-radius: 0.5em;
     text-decoration: none;
     text-align: center;
@@ -185,6 +211,12 @@ section{
 }
 
 /* Member Card */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 1em;
+}
+
 .member-card{
     display: flex;
     position: relative;
