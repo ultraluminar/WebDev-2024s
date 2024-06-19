@@ -1,3 +1,24 @@
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "hero"
+        "merch"
+        "tickets";
+}
+
+#merch{
+    grid-area: merch;
+}
+
+#tickets{
+    grid-area: tickets;
+}
+
+.card-container{
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+}
+
 #logo-text-shop {
     position: absolute;
     bottom: -5px;
@@ -5,7 +26,6 @@
     font-size: 0.75em;
     font-family: Ubuntu, sans-serif;
     color: var(--secondary-color);
-
 }
 
 #icons {
@@ -92,7 +112,6 @@
     cursor: pointer;
 }
 
-/* when clicked */
 .add-cart-button:active{
     transform: translateY(-5px);
     box-shadow: 0px 5px 50px -13px var(--primary-color-light);
