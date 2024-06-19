@@ -44,6 +44,7 @@ export class Cart {
             Object.entries(this.order).forEach(([id, count]) => {
                 sum += this.product_details[id].price * count;
 
+                // TODO: round
                 this.sub_total.textContent = `${sum}€`;
                 this.total.textContent = `${sum}€`;
             });
