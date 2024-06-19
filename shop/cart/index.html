@@ -1,48 +1,50 @@
 <!DOCTYPE html>
 <html lang="de">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link rel="stylesheet" href="../../shared.css">
-        <link rel="stylesheet" href="../../layout.css">
-        <link rel="stylesheet" href="../shop.css">
-        <link rel="stylesheet" href="cart.css">
 
-        <script type="module" src="../../nav.js"></script>
-        <script type="module" src="../cart.js"></script>
-        <script type="module" src="script.js"></script>
-        
-        <link rel="icon" href="../../assets/favicon.ico" sizes="32x32">
-        <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16.png">
-        <!-- Not veasable to turn our logo into svg -->
-        <!-- <link rel="icon" href="/icon.svg" type="image/svg+xml"> -->
-        <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png"><!-- 180×180 -->
-        <link rel="manifest" href="../../assets/favicon/manifest.json">
-        <title>Krakatoa - Warenkorb</title>
-    </head>
-    <body>
-        <header>
-            <div>
-                <a href="../../"><img src="../../assets/main_logo/main_logo_128.png" alt="TODO: alt description" height="45"></a>
-                <a href="../../" id="logo-text">KRAKATOA<span id="logo-text-shop">SHOP</span></a>
-            </div>
-            <div id="icons">
-                <a id="cart-link" href=".">
-                    <img src="../../assets/shop/shopping_cart.svg"/><!-- TODO: alt -->
-                    <div id="badge">
-                        0
-                    </div>
-                </a>
-                <a id="burger-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </a>
-            </div>
-            <!-- <nav id="desktop-nav">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../shared.css">
+    <link rel="stylesheet" href="../../layout.css">
+    <link rel="stylesheet" href="../shop.css">
+    <link rel="stylesheet" href="cart.css">
+
+    <script type="module" src="../../nav.js"></script>
+    <script type="module" src="../cart.js"></script>
+    <script type="module" src="script.js"></script>
+
+    <link rel="icon" href="../../assets/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16.png">
+    <!-- Not veasable to turn our logo into svg -->
+    <!-- <link rel="icon" href="/icon.svg" type="image/svg+xml"> -->
+    <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png"><!-- 180×180 -->
+    <link rel="manifest" href="../../assets/favicon/manifest.json">
+    <title>Krakatoa - Warenkorb</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="../../"><img src="../../assets/main_logo/main_logo_128.png" alt="TODO: alt description" height="45"></a>
+            <a href="../../" id="logo-text">KRAKATOA<span id="logo-text-shop">SHOP</span></a>
+        </div>
+        <div id="icons">
+            <a id="cart-link" href=".">
+                <img src="../../assets/shop/shopping_cart.svg" alt="TODO: alt">
+                <div id="badge">
+                    0
+                </div>
+            </a>
+            <a id="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+        <!-- <nav id="desktop-nav">
                 <ul>
                     <li><a href="index.html">Startseite</a></li>
                     <li><a href="index.html">Über uns</a></li>
@@ -50,26 +52,41 @@
                     <li><a href="index.html">Impressum</a></li>
                 </ul>
             </nav> -->
-        </header>
-        <aside>
-            <nav id="mobile-side-nav">
-                <ul>
-                    <li><a href="../../">STARTSEITE</a></li>
-                    <li><a href="../../band/">DIE BAND</a></li>
-                    <li><a href="../../shop/">SHOP</a></li>
-                    <li><a href="../../tour/">TOUR</a></li>
-                </ul>
-            </nav>
-        </aside>
-        <main>
-            <section class="content-section">
-                <h2 class="section-head">Order</h2>
-                <div class="section-body">
-                    <table id="order-table">
-                        <!-- filled by js -->
-                    </table>
-                </div>
+    </header>
+    <aside>
+        <nav id="mobile-side-nav">
+            <ul>
+                <li><a href="../../">STARTSEITE</a></li>
+                <li><a href="../../band/">DIE BAND</a></li>
+                <li><a href="../../shop/">SHOP</a></li>
+                <li><a href="../../tour/">TOUR</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <section class="content-section">
+            <h2 class="section-head">Order</h2>
+            <div class="section-body">
+                <table id="order-table">
+                    <!-- filled by js -->
+                </table>
+            </div>
 
-            </section>
-        </main>
-    </body>
+        </section>
+        <section class="content-section" id="bestellungen">
+            <div class="cart-card">
+                <img class="cart-card-image" src="../../assets/main_logo/main_logo_128.png" alt="">
+                <div class="cart-card-body">
+                    <h3 class="cart-card-title">Title</h3>
+                    <p class="cart-card-price">10.00€</p>
+                    <div class="custom-spinbox">
+                        <button class="spinbox-button"><img src="../../assets/shop/minus.svg" alt="Minus Symbol"></button>
+                        <input class="spinbox-input" type="number" min="1" max="99" value="1">
+                        <button class="spinbox-button"><img src="../../assets/shop/plus.svg" alt="Plus Symbol"></button>
+                    </div>
+                    <button class="cart-card-remove"><img src="../../assets/shop/cart/delete.svg" alt="" height="30"></button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>

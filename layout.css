@@ -23,7 +23,7 @@ header a {
     
 #logo-text {
     font-family: 'Rubik Scribble', cursive;
-    font-size: 2.25rem;
+    font-size: 2.25em;
     font-weight: bold;
     color: var(--primary-color);
     position: relative;

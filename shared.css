@@ -49,6 +49,12 @@ body {
     padding-bottom: 200px;
 }
 
+@media screen and (max-width: 450px){
+    body{
+        font-size: 0.8em;
+    }
+}
+
 @media screen and (min-width: 1250px) {
     body {
         font-size: 1.2em;
