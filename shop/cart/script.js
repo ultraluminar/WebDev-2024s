@@ -11,8 +11,6 @@ function createRow(...values){
     
 }
 
-
-
 let sum = 0;
 const cart = new Cart();
 
