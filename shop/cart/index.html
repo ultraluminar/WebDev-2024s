@@ -64,31 +64,59 @@
         </nav>
     </aside>
     <main>
-        <section class="content-section">
-            <h2 class="section-head">Order</h2>
-            <div class="section-body">
-                <table id="order-table">
-                    <!-- filled by js -->
-                </table>
-            </div>
-
-        </section>
         <section class="content-section" id="bestellungen">
             <h2 class="section-head">Bestellungen</h2>
             <div class="section-body">
-            <div class="cart-card">
-                <img class="cart-card-image" src="../../assets/main_logo/main_logo_128.png" alt="">
-                <div class="cart-card-body">
-                    <h3 class="cart-card-title">Title</h3>
-                    <p class="cart-card-price">10.00€</p>
-                    <div class="custom-spinbox">
-                        <button class="spinbox-button"><img src="../../assets/shop/minus.svg" alt="Minus Symbol"></button>
-                        <input class="spinbox-input" type="number" min="1" max="99" value="1">
-                        <button class="spinbox-button"><img src="../../assets/shop/plus.svg" alt="Plus Symbol"></button>
+                <div class="cart-card">
+                    <img class="cart-card-image" src="../../assets/main_logo/main_logo_128.png" alt="">
+                    <div class="cart-card-body">
+                        <h3 class="cart-card-title">Title</h3>
+                        <p class="cart-card-price">10.00€</p>
+                        <div class="custom-spinbox">
+                            <button class="spinbox-button"><img src="../../assets/shop/minus.svg" alt="Minus Symbol"></button>
+                            <input class="spinbox-input" type="number" min="1" max="99" value="1">
+                            <button class="spinbox-button"><img src="../../assets/shop/plus.svg" alt="Plus Symbol"></button>
+                        </div>
+                        <button class="cart-card-remove"><img src="../../assets/shop/cart/delete.svg" alt="" height="30"></button>
                     </div>
-                    <button class="cart-card-remove"><img src="../../assets/shop/cart/delete.svg" alt="" height="30"></button>
+                </div>
+                <!-- Filled with javascript -->
+            </div>
+        </section>
+        <section class="content-section" id="rechnung">
+            <h2 class="section-head">Rechnung</h2>
+            <div class="section-body">
+                <div class="inner-container">
+                    <table>
+                        <tr>
+                            <td class="sub-total-price">Zwischensumme</td>
+                            <td>0,00€</td>
+                        </tr>
+                        <tr>
+                            <td>Versandkosten</td>
+                            <td class="free-shipping">kostenlos</td>
+                        </tr>
+                        <tr>
+                            <td>Gesamtpreis</td>
+                            <td class="total-price">0,00€</td>
+                        </tr>
+                    </table>
+                    <button class="buy-button link-button bg-primary">Jetzt Kaufen</button>
                 </div>
             </div>
         </section>
     </main>
+    <footer>
+        <p>&copy; 2024 Adrian Lösch, Lukas Klassen.<br>All rights reserved.</p>
+        <div class="socials">
+            <p>Follow us:</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank"><img src="../../assets/footer/facebook-logo.svg" alt="facebook" height="32"></a>
+                <a href="https://www.x.com" target="_blank"><img src="../../assets/footer/X-logo.svg" alt="twitter" height="32"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="../../assets/footer/instagram-logo.svg" alt="instagram" height="32"></a>
+                <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img src="../../assets/footer/youtube-logo.svg" alt="youtube" height="32"></a>
+            </div>
+        </div>
+        <a class="inline-link" href="../../impressum/">Impressum</a>
+    </footer>
 </body>
