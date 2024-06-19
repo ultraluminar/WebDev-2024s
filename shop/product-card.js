@@ -42,7 +42,6 @@ function createSpinBox(parent, path_assets, minus_event = () => {}, plus_event =
 
         button_increment.addEventListener('click', () => {
             let value = parseInt(input.value);
-            console.log(value, value !== 99);
             if (value !== 99){
                 plus_event();
                 input.value = value + 1;
