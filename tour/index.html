@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="module" src="../nav.js"></script>
+        <link rel="stylesheet" href="../shared.css">
+        <link rel="stylesheet" href="../layout.css">
+        <link rel="stylesheet" href="band.css">
+        <link rel="icon" href="../assets/favicon.ico" sizes="32x32">
+        <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16.png">
+        <!-- Not veasable to turn our logo into svg -->
+        <!-- <link rel="icon" href="/icon.svg" type="image/svg+xml"> -->
+        <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png"><!-- 180×180 -->
+        <link rel="manifest" href="../assets/favicon/manifest.json">
+        <title>Europa Tour - Krakatoa</title>
+    </head>
+    <body>
+        <header>
+            <div id="header-logos">
+                <a href="../"><img src="../assets/main_logo/main_logo_128.png" alt="TODO: alt description" height="45"></a>
+                <a href="../" id="logo-text">KRAKATOA</a>
+                <nav id="desktop-nav">
+                    <ul>
+                        <li><a href="../">STARTSEITE</a></li>
+                        <li><a href="../band/">DIE BAND</a></li>
+                        <li><a href="../shop/">SHOP</a></li>
+                        <li><a href="./">TOUR</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <a id="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </header>
+        <div id="mobile-nav-filter"></div>
+        <nav id="mobile-side-nav">
+            <ul>
+                <li><a href="../">STARTSEITE</a></li>
+                <li><a href="../band/">DIE BAND</a></li>
+                <li><a href="../shop/">SHOP</a></li>
+                <li><a href="./">TOUR</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section class="hero">
+                <div class="hero-text">
+                    <h1>EUROPA TOUR</h1>
+                    <p>
+                        Wir sind auf Tour in Europa! Hier findest du alle Termine und Tickets.
+                    </p>
+                    <div class="hero-links">
+                        <a href="#dates" class="link-button bg-primary">Tourdaten</a>
+                        <a href="#tickets" class="link-button bg-secondary">Tickets</a>
+                    </div>
+                </div>
+                <img src="../assets/tour/europe_tour_hero_optimized.webp" alt="TODO: alt description" class="hero-image">
+            </section>
+            <section id="dates" class="content-section">
+                <h2 class="section-head">TOURDATEN</h2>
+                <div class="section-body">
+                    <table>
+                        <tr>
+                            <th>Datum</th>
+                            <th>Ort</th>
+                            <th>Location</th>
+                        </tr>
+                        <tr>
+                            <td>01.01.2024</td>
+                            <td>Paris</td>
+                            <td>La Cigale</td>
+                        </tr>
+                        <tr>
+                            <td>02.01.2024</td>
+                            <td>London</td>
+                            <td>Roundhouse</td>
+                        </tr>
+                        <tr>
+                            <td>03.01.2024</td>
+                            <td>Amsterdam</td>
+                            <td>Paradiso</td>
+                        </tr>
+                        <tr>
+                            <td>04.01.2024</td>
+                            <td>Brüssel</td>
+                            <td>Ancienne Belgique</td>
+                        </tr>
+                        <tr>
+                            <td>05.01.2024</td>
+                            <td>Berlin</td>
+                            <td>Tempodrom</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <section id="tickets" class="content-section">
+                <h2 class="section-head">TICKETS</h2>
+                <div class="section-body">
+                    <p>
+                        Tickets für unsere Tour sind ab sofort erhältlich. Sichere dir jetzt deine Karte!
+                    </p>
+                    <a href="../shop/" class="link-button bg-primary">Tickets kaufen</a>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Adrian Lösch, Lukas Klassen.<br>All rights reserved.</p>
+            <div class="socials">
+                <p>Folge uns hier:</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank"><img src="../assets/footer/facebook-logo.svg" alt="facebook" height="32"></a>
+                    <a href="https://www.x.com" target="_blank"><img src="../assets/footer/X-logo.svg" alt="twitter" height="32"></a>
+                    <a href="https://www.instagram.com" target="_blank"><img src="../assets/footer/instagram-logo.svg" alt="instagram" height="32"></a>
+                    <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img src="../assets/footer/youtube-logo.svg" alt="youtube" height="32"></a>
+                </div>
+            </div>
+            <a class="inline-link" href="../impressum/">Impressum</a>
+        </footer>
+    </body>
+</html>

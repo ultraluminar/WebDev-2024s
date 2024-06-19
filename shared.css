@@ -114,6 +114,7 @@ section{
 .hero-image{
     width: 100%;
     max-width: 70vh;
+    border-radius: .75em;
 }
 
 .hero-text{
