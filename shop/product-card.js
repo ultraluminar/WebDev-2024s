@@ -26,7 +26,7 @@ export function createCard(parent, id, title, description, price, img_src, img_a
                 paragraph.textContent = description;
 
                 const price_tag = create("p", info, "product-price");
-                price_tag.textContent = `${price}`;
+                price_tag.textContent = `${price}€`;
 
             const buttons = create("div", card, "product-buttons");
 
