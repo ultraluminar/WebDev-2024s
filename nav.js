@@ -8,10 +8,6 @@ function toggleNav() {
     filter.classList.toggle('open');
 }
 
-icon.addEventListener("click", () => {
-    toggleNav();
-});
+icon.addEventListener("click", toggleNav);
 
-filter.addEventListener("click", () => {
-    toggleNav();
-});
+filter.addEventListener("click", toggleNav);
