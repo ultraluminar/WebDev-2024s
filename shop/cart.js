@@ -50,8 +50,8 @@ export class Cart {
 
             let sum_rounded = sum.toFixed(2);
                 
-            this.sub_total.textContent = `${sum_rounded}€`;
-            this.total.textContent = `${sum_rounded}€`;
+            this.sub_total.textContent = `${sum_rounded} €`;
+            this.total.textContent = `${sum_rounded} €`;
         }
     }
 

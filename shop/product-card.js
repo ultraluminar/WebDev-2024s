@@ -91,7 +91,7 @@ export function createCartCard(cart, parent, id, title, description, price, img_
             heading.textContent = title;
 
             const price_tag = create("p", body, "cart-card-price");
-            price_tag.textContent = `${price}€`;
+            price_tag.textContent = `${price} €`;
 
             const spinbox = createSpinBox(
                 body, "../../assets", 
@@ -141,7 +141,7 @@ export function createCard(cart, parent, id, title, description, price, img_src,
             paragraph.textContent = description;
 
             const price_tag = create("p", info, "product-price");
-            price_tag.textContent = `${price}€`;
+            price_tag.textContent = `${price} €`;
 
         const buttons = create("div", card, "product-buttons");
 
