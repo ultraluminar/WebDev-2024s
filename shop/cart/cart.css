@@ -93,7 +93,7 @@ tr:last-child td{
     color: #77c077;
 }
 
-.total-price{
+#total-price{
     font-size: 1.5em;
     color: var(--secondary-color-light);
 }
@@ -101,4 +101,15 @@ tr:last-child td{
 #buy-button{
     border: none;
     font-size: 1em;
+}
+
+#buy-button:disabled{
+    background-color: #737373;
+    color: var(--text-color);
+}
+
+#buy-button:disabled:hover{
+    transform: none;
+    box-shadow: none;
+    cursor: default;
 }
