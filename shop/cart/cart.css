@@ -106,6 +106,7 @@ tr:last-child td{
 #buy-button:disabled{
     background-color: #737373;
     color: var(--text-color);
+    transition: .3s ease-in-out;
 }
 
 #buy-button:disabled:hover{

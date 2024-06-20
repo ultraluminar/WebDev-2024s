@@ -7,6 +7,7 @@ export class Cart {
             this.sub_total = on_save.sub_total;
             this.total = on_save.total;
             this.product_details = on_save.product_details;
+            this.button_buy = on_save.button_buy;
             this.callback = true;
         } else {
             this.callback = false;
@@ -40,14 +41,17 @@ export class Cart {
         document.cookie = `${this.key}=${order_string};path=/`;
 
         if (this.callback){
+            this.button_buy.disabled = (this.count === 0);
+
             let sum = 0;
             Object.entries(this.order).forEach(([id, count]) => {
                 sum += this.product_details[id].price * count;
-                let sum_rounded = sum.toFixed(2);
-                
-                this.sub_total.textContent = `${sum_rounded}€`;
-                this.total.textContent = `${sum_rounded}€`;
             });
+
+            let sum_rounded = sum.toFixed(2);
+                
+            this.sub_total.textContent = `${sum_rounded}€`;
+            this.total.textContent = `${sum_rounded}€`;
         }
     }
 
