@@ -7,6 +7,11 @@ const cart = new Cart(product_details);
 // create product-card
 const template_product_card = document.getElementById("product-card-template");
 
+const cart_card_container = {
+    merch: document.getElementById("merch").querySelector(".card-container"),
+    tickets: document.getElementById("tickets").querySelector(".card-container")
+};
+
 function createProductCard(product){
     const product_card_clone = template_product_card.content.cloneNode(true);
 
@@ -61,8 +66,8 @@ function createProductCard(product){
 
     });
 
-    const product_card_container = document.getElementById(product.type).querySelector(".card-container");
-    product_card_container.appendChild(product_card_clone);
+    
+    cart_card_container[product.type].appendChild(product_card_clone);
     return product_card;
 }
 
