@@ -112,4 +112,25 @@
             <button id="close-popup" class="link-button bg-primary">Schließen</button>
         </div>
     </div>
+    <template id="cart-card-template">
+        <div class="cart-card">
+            <img class="cart-card-image"><!-- src, alt -->
+            <div class="cart-card-body">
+                <h3 class="cart-card-heading"><!-- textContent --></h3>
+                <p class="cart-card-price"><!-- textContent --></p>
+                <div class="custom-spinbox">
+                    <button class="spinbox-button">
+                        <img src="../../assets/shop/minus.svg" alt="Minus Symbol" class="spinbox-minus">
+                    </button>
+                    <input type="number" class="spinbox-input" min="1" value="1">
+                    <button class="spinbox-button">
+                        <img src="../../assets/shop/plus.svg" alt="Plus Symbol" class="spinbox-plus">
+                    </button>
+                </div>
+                <button class="cart-card-remove">
+                    <img src="../../assets/shop/cart/delete.svg" alt="Mülltonnen Symbol" height="30">
+                </button>
+            </div>
+        </div>
+    </template>
 </body>

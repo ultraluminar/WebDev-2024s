@@ -1,76 +1,64 @@
 export class Cart {
-    constructor(on_save){
+    constructor(product_details) {
+        this.product_details = product_details
+
         this.key = "order";
         this.badge = document.getElementById("badge");
-        
-        if (on_save){
-            this.sub_total = on_save.sub_total;
-            this.total = on_save.total;
-            this.product_details = on_save.product_details;
-            this.button_buy = on_save.button_buy;
-            this.callback = true;
-        } else {
-            this.callback = false;
-        }
+
 
         if (document.cookie === ""){
+            // create and save empty cookie
             this.order = {};
-            return;
-        }
-        
-        let order_string = document.cookie.replace(`${this.key}=`, '');
-        this.order = JSON.parse(order_string);
-
-        
-        if (Object.keys(this.order).length > 0){
-            let count = Object.values(this.order).reduce((a, b) => a + b);
-            this.setBadge(count)
+            this.save();
         } else {
-            this.setBadge(0);
+            // load orders from cookie
+            let order_string = document.cookie.replace(`${this.key}=`, '');
+            this.order = JSON.parse(order_string);
         }
-        this.save();
-    }
-
-    setBadge(count){
-        this.count = count
-        this.badge.innerHTML = count;
-    }
-
-    save(){
-        let order_string = JSON.stringify(this.order);
-        document.cookie = `${this.key}=${order_string};path=/`;
-
-        if (this.callback){
-            this.button_buy.disabled = (this.count === 0);
-
-            let sum = 0;
-            Object.entries(this.order).forEach(([id, count]) => {
-                sum += this.product_details[id].price * count;
-            });
-
-            let sum_rounded = sum.toFixed(2);
-                
-            this.sub_total.textContent = `${sum_rounded} €`;
-            this.total.textContent = `${sum_rounded} €`;
-        }
-    }
-
-    set(id, count){
-        this.setBadge(this.count - (this.order[id] || 0) + count);
-        this.order[id] = count;
-        this.save();
-
+        this.setBadge();
     }
     
-    add(id, count = 1){
-        this.order[id] = (this.order[id] || 0) + count;
-        this.setBadge((this.count || 0) + count);
+    setBadge() {
+        this.badge.innerHTML = Object.values(this.order).reduce((a, b) => a + b, 0)
+    };
+
+    save() {
+        let order_string = JSON.stringify(this.order);
+        document.cookie = `${this.key}=${order_string};path=/`;
+    }
+
+    set(id, count) {
+        this.order[id] = count;
+        this.setBadge();
         this.save();
     }
 
-    delete(id){
-        this.setBadge(this.count - this.order[id]);
-        delete this.order[id];
+    add(id, count) {
+        this.order[id] = (this.order[id] || 0) + count;
+        this.setBadge();
         this.save();
+    }
+
+    delete(id) {
+        delete this.order[id];
+        this.setBadge();
+        this.save();
+    }
+    
+    clear() {
+        this.order = {};
+        this.setBadge();
+        this.save();
+    }
+
+    getMax(id) {
+        return 99 - (this.order[id] || 0);
+    }
+
+    getPriceSum() {
+        return Object.entries(this.order)
+            .map(([id, count]) => this.product_details[id].price * count)
+            .reduce((a, b) => a + b, 0)
+            .toFixed(2);
     }
 }

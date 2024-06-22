@@ -100,5 +100,27 @@
             </div>
             <a class="inline-link" href="../impressum/">Impressum</a>
         </footer>
+        <template id="product-card-template">
+            <div class="product-card">
+                <img class="product-image"><!-- src, alt -->
+                <div class="product-info">
+                    <h3 class="product-title"><!-- textContent --></h3>
+                    <p class="product-description"><!-- textContent --></p>
+                    <p class="product-price"><!-- textContent --></p>
+                </div>
+                <div class="product-buttons">
+                    <div class="custom-spinbox">
+                        <button class="spinbox-button">
+                            <img src="../assets/shop/minus.svg" alt="Minus Symbol" class="spinbox-minus">
+                        </button>
+                        <input type="number" class="spinbox-input" min="0" value="1">
+                        <button class="spinbox-button">
+                            <img src="../assets/shop/plus.svg" alt="Plus Symbol" class="spinbox-plus">
+                        </button>
+                    </div>
+                    <button class="add-cart-button">In den Warenkorb</button>
+                </div>
+            </div>
+        </template>
     </body>
 </html>
