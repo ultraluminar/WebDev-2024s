@@ -5,11 +5,15 @@ const product_details = getProductDetails("../../assets");
 const cart = new Cart(product_details);
 
 // update invoice
+const button_buy = document.getElementById("buy-button");
 const sub_total_price_tr = document.getElementById("sub-total-price");
 const total_price_tr = document.getElementById("total-price");
 
 function setInvoice(){
-    let price_string = `${cart.getPriceSum()} €`;
+    let price = cart.getPriceSum();
+    if (Object.keys(cart.order).length === 0) button_buy.disabled = true;
+
+    let price_string = `${price} €`;
     sub_total_price_tr.textContent = price_string;
     total_price_tr.textContent = price_string;
 }
@@ -35,8 +39,6 @@ function createCartCard([id, count]){
 
     const input = cart_card.querySelector(".spinbox-input");
     input.value = count;
-
-    setInvoice();
 
     input.addEventListener("keydown", (event) => {
         if ("+-,. eE".includes(event.key)) event.preventDefault();
@@ -94,7 +96,6 @@ function createCartCard([id, count]){
 }
 
 // on buy
-const button_buy = document.getElementById("buy-button");
 const popup = document.getElementById("popup");
 
 button_buy.addEventListener('click', () => {
@@ -110,3 +111,5 @@ popup.addEventListener("click", () => {
 
 // generate card-card's from order
 Object.entries(cart.order).forEach(createCartCard);
+
+setInvoice();
