@@ -32,9 +32,10 @@
 .cart-card-image{
     height: 100%;
     min-width: 100px;
+    max-width: 128px;
 }
 
-.cart-card-title{
+.cart-card-heading{
     grid-area: title;
 }
 
