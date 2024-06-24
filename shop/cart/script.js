@@ -29,7 +29,6 @@ function createCartCard([id, count]){
     const cart_card = cart_card_clone.querySelector(".cart-card");
     cart_card.id = product.id;
 
-    // TODO: add cart-card-sized images
     const image = cart_card.querySelector(".cart-card-image");
     image.src = product.img_src;
     image.alt = product.img_alt;
