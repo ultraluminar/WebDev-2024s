@@ -1,5 +1,32 @@
+main{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "orders"
+        "bill";
+    gap: 2em;
+}
+
+@media screen and (min-width: 900px){
+    main{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "orders bill";
+    }
+}
+
 /* Cart Card */
+.card-container{
+    display: flex;
+    grid-template-columns: none;
+    flex-direction: column;
+    width: fit-content;
+    gap: 1em;
+}
+
 #bestellungen{
+    grid-area: orders;
     padding: 0;
 }
 
@@ -21,7 +48,7 @@
 
 .cart-card-body{
     display: grid;
-    grid-template-columns: minmax(min-content, 1fr) 1fr;
+    grid-template-columns: minmax(min-content, 1fr) 3fr;
     grid-template-areas:
         "title title"
         "price price"
@@ -30,9 +57,15 @@
 }
 
 .cart-card-image{
-    height: 100%;
-    min-width: 100px;
-    max-width: 128px;
+    width: 128px;
+    height: 128px;
+}
+
+@media screen and (max-width: 450px){
+    .cart-card-image{
+        width: 100px;
+        height: 100px;
+    }
 }
 
 .cart-card-heading{
@@ -64,6 +97,16 @@
 }
 
 /* Bill */
+#rechnung{
+    grid-area: bill;
+}
+
+@media screen and (min-width: 900px){
+    #rechnung{
+        padding-top: 0;
+    }
+}
+
 .inner-container{
     display: flex;
     flex-direction: column;
