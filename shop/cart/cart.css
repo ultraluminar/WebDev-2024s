@@ -17,11 +17,11 @@
     gap: 1em;
     background-color: var(--background-grey);
     border-radius: 0.75em;
-}    
+}
 
 .cart-card-body{
     display: grid;
-    grid-template-columns: minmax(max-content, 1fr) 1fr;
+    grid-template-columns: minmax(min-content, 1fr) 1fr;
     grid-template-areas:
         "title title"
         "price price"
