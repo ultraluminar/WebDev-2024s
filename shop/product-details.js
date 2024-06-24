@@ -15,7 +15,7 @@ export function getProductDetails(path_assets){
             title: "Krakatoa T-Shirt (schwarz)",
             description: "Unser klassisches Krakatoa T-Shirt in schwarz. Mit unserem klassischen Logo groß auf der Brust. 100% Baumwolle, 185g/m²",
             price: 24.99,
-            img_src: getCardPath("tshirt_with_print_old"),
+            img_src: getCardPath("tshirt-with-print-old"),
             img_alt: "Tshirt mit alternativem Logo Design"
         },
         {
@@ -24,7 +24,7 @@ export function getProductDetails(path_assets){
             title: "Krakatoa T-Shirt (schwarz) - Neues Logo",
             description: "Unser neues Überarbeitetes Krakatoa T-Shirt in schwarz. Mit unserem neuen Logo groß auf der Brust. 100% Baumwolle, 185g/m²",
             price: 27.99,
-            img_src: getCardPath("tshirt_with_print"),
+            img_src: getCardPath("tshirt-with-print"),
             img_alt: "Tshirt mit neuem Überarbeitetem Logo Design"
         },
         {
@@ -33,7 +33,7 @@ export function getProductDetails(path_assets){
             title: "Krakatoa Hoodie (schwarz)",
             description: "Unser klassischer Krakatoa Hoodie in schwarz. Mit unserem Schriftzug groß auf der Brust. 80% Baumwolle, 20% Polyester, 280g/m²",
             price: 44.99,
-            img_src: getCardPath("hoodie_with_print"),
+            img_src: getCardPath("hoodie-with-print"),
             img_alt: "Hoodie mit Krakatoa Schriftzug auf der Brust"
         },
         {
@@ -51,7 +51,7 @@ export function getProductDetails(path_assets){
             title: "Krakatoa Hut (schwarz) mit rotem Logo",
             description: "Unser klassischer Krakatoa Hut in schwarz. Mit unserem Logo in rot auf der Vorderseite. 100% Baumwolle",
             price: 19.99,
-            img_src: getCardPath("hat_with_logo"),
+            img_src: getCardPath("hat-with-logo"),
             img_alt: "Krakatoa Hut (schwarz) mit rotem Logo"
         },
 

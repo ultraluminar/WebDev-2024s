@@ -1,4 +1,4 @@
-import { getProductDetails } from "../product_details.js";
+import { getProductDetails } from "../product-details.js";
 import { Cart } from "../cart.js";
 
 const product_details = getProductDetails("../../assets");
