@@ -53,6 +53,88 @@ export function getProductDetails(path_assets){
             price: 19.99,
             img_src: getCardPath("hat_with_logo"),
             img_alt: "Krakatoa Hut (schwarz) mit rotem Logo"
+        },
+
+        {
+            id: 5,
+            type: ProductType.tickets,
+            title: "Konzert Ticket - Wien",
+            description: "Tickets für unser Konzert in Wien. Am 01.08.2021 um 20:00 Uhr. In der Stadthalle Wien.",
+            price: 49.99,
+            img_src: getCardPath("ticket"),
+            img_alt: "Kratatoa Konzert Ticket, Schwarz mit roten Akzenten"
+        },
+        {
+            id: 6,
+            type: ProductType.tickets,
+            title: "Konzert Ticket - Prag",
+            description: "Tickets für unser Konzert in Prag. Am 04.08.2021 um 20:00 Uhr. Im Forum Karlín Prag",
+            price: 44.99,
+            img_src: getCardPath("ticket"),
+            img_alt: "Kratatoa Konzert Ticket, Schwarz mit roten Akzenten"
+        },
+        {
+            id: 7,
+            type: ProductType.tickets,
+            title: "Konzert Ticket - Budapest",
+            description: "Tickets für unser Konzert in Budapest. Am 06.08.2021 um 19:00 Uhr. In Papp László Budapest Sportaréna",
+            price: 54.99,
+            img_src: getCardPath("ticket"),
+            img_alt: "Kratatoa Konzert Ticket, Schwarz mit roten Akzenten"
+        },
+        {
+            id: 8,
+            type: ProductType.tickets,
+            title: "Konzert Ticket - Warschau",
+            description: "Tickets für unser Konzert in Warschau. Am 11.08.2021 um 20:30 Uhr. In der Tauron Arena Kraków",
+            price: 59.99,
+            img_src: getCardPath("ticket"),
+            img_alt: "Kratatoa Konzert Ticket, Schwarz mit roten Akzenten"
+        },
+        {
+            id: 9,
+            type: ProductType.tickets,
+            title: "Konzert Ticket - Berlin",
+            description: "Tickets für unser Konzert in Berlin. Am 13.08.2021 um 20:00 Uhr. In der Mercedes-Benz Arena Berlin",
+            price: 49.99,
+            img_src: getCardPath("ticket"),
+            img_alt: "Kratatoa Konzert Ticket, Schwarz mit roten Akzenten"
+        },
+        {
+            id: 10,
+            type: ProductType.tickets,
+            title: "Konzert Ticket - Ansterdam",
+            description: "Tickets für unser Konzert in Ansterdam. Am 17.08.2021 um 19:30 Uhr. Im Ziggo Dome Ansterdam",
+            price: 54.99,
+            img_src: getCardPath("ticket"),
+            img_alt: "Kratatoa Konzert Ticket, Schwarz mit roten Akzenten"
+        },
+        {
+            id: 11,
+            type: ProductType.tickets,
+            title: "Konzert Ticket - Paris",
+            description: "Tickets für unser Konzert in Paris. Am 21.08.2021 um 20:00 Uhr. In der AccorHotels Arena Paris",
+            price: 59.99,
+            img_src: getCardPath("ticket"),
+            img_alt: "Kratatoa Konzert Ticket, Schwarz mit roten Akzenten"
+        },
+        {
+            id: 12,
+            type: ProductType.tickets,
+            title: "Konzert Ticket - London",
+            description: "Tickets für unser Konzert in London. Am 24.08.2021 um 21:00 Uhr. In der The O2 Arena London",
+            price: 49.99,
+            img_src: getCardPath("ticket"),
+            img_alt: "Kratatoa Konzert Ticket, Schwarz mit roten Akzenten"
+        },
+        {
+            id: 13,
+            type: ProductType.tickets,
+            title: "Konzert Ticket - Madrid",
+            description: "Tickets für unser Konzert in Madrid. Am 27.08.2021 um 20:00 Uhr. Im WiZink Center Madrid",
+            price: 54.99,
+            img_src: getCardPath("ticket"),
+            img_alt: "Kratatoa Konzert Ticket, Schwarz mit roten Akzenten"
         }
     ]
 }
