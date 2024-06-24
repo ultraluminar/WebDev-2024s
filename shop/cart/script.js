@@ -27,9 +27,8 @@ function createCartCard([id, count]){
 
     // TODO: add cart-card-sized images
     const image = cart_card.querySelector(".cart-card-image");
-    image.src = "../../assets/main_logo/main_logo_128.png"; //product.img_src;
-    image.alt = "Haupt Logo"; //product.img_alt;
-    image.height = 128; //remove this line;
+    image.src = product.img_src;
+    image.alt = product.img_alt;
 
     cart_card.querySelector(".cart-card-heading").textContent = product.title;
     cart_card.querySelector(".cart-card-price").textContent = `${product.price} €`;
