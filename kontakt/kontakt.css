@@ -1,0 +1,113 @@
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "hero"
+        "fanpost";
+}
+
+#fanpost{
+    grid-area: fanpost;
+}
+
+/* Form */
+form{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "name"
+        "mail"
+        "message"
+        "info"
+        "submit";
+    gap: 1em;
+}
+
+@media screen and (min-width: 800px){
+    form{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "name mail"
+            "message message"
+            "info submit";
+    }
+
+    #submit-div{
+        justify-self: end;
+    }
+}
+
+#name-div{
+    grid-area: name;
+}
+
+#mail-div{
+    grid-area: mail;
+}
+
+#message-div{
+    grid-area: message;
+}
+
+#info-div{
+    grid-area: info;
+}
+
+#submit-div{
+    grid-area: submit;
+}
+
+.input-field{
+    position: relative;
+}
+
+.input-input{
+    padding: 1em 1em 1em 3em;
+    font-family: inherit;
+    font-size: 1em;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    width: calc(100% - 4em - 4px);
+    border: 2px solid grey;
+    border-radius: 0.5em;
+    resize: none;
+}
+
+.input-input:-interal-autofill-selected{
+    background-color: var(--background-grey) !important;
+}
+
+.input-input:focus{
+    outline: none;
+    border: 2px solid var(--secondary-color-light);
+}
+
+#message-textarea{
+    height: 10em;
+}
+
+.input-label{
+    display: block;
+    position: absolute;
+    padding: 1.1em;
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.input-icon{
+    width: 100%;
+    height: 100%;
+}
+
+#submit-button{
+    border: none;
+    font-size: 1em;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+@media screen and (min-width: 550px){
+    #submit-button{
+        max-width: 20em;
+    }
+}

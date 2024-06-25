@@ -16,8 +16,10 @@
 
     <link rel="stylesheet" href="../shared.css">
     <link rel="stylesheet" href="../layout.css">
+    <link rel="stylesheet" href="kontakt.css">
 
     <script type="module" src="../nav.js"></script>
+    <script type="module" src="script.js"></script>
 
     <link rel="icon" href="../assets/favicon/favicon.ico" sizes="32x32">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32.png">
@@ -32,16 +34,16 @@
 <body>
     <header>
         <div>
-            <a href="."><img src="../assets/main-logo/main-logo-128.png"
+            <a href="../"><img src="../assets/main-logo/main-logo-128.png"
                     alt="Eine schwarze Krähe fliegt über einen weiten Ozean mit einer kleinen Insel in der Ferne"
                     height="45"></a>
-            <a href="." id="logo-text">KRAKATOA</a>
+            <a href="../" id="logo-text">KRAKATOA</a>
             <nav id="desktop-nav">
                 <ul>
-                    <li><a href=".">STARTSEITE</a></li>
-                    <li><a href="band/">DIE BAND</a></li>
-                    <li><a href="shop/">SHOP</a></li>
-                    <li><a href="tour/">TOUR</a></li>
+                    <li><a href="../">STARTSEITE</a></li>
+                    <li><a href="../band/">DIE BAND</a></li>
+                    <li><a href="../shop/">SHOP</a></li>
+                    <li><a href="../tour/">TOUR</a></li>
                 </ul>
             </nav>
         </div>
@@ -55,39 +57,58 @@
     <div id="mobile-nav-filter"></div>
     <nav id="mobile-side-nav">
         <ul>
-            <li><a href=".">STARTSEITE</a></li>
-            <li><a href="band/">DIE BAND</a></li>
-            <li><a href="shop/">SHOP</a></li>
-            <li><a href="tour/">TOUR</a></li>
+            <li><a href="../">STARTSEITE</a></li>
+            <li><a href="../band/">DIE BAND</a></li>
+            <li><a href="../shop/">SHOP</a></li>
+            <li><a href="../tour/">TOUR</a></li>
         </ul>
     </nav>
     <main>
-        <section>
-            <div>
-                <form>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Kontakt</h1>
+                <p>
+                    Wir freuen uns über deine Fanpost und Feedback. Schicke uns eine Nachricht und wir werden uns so schnell
+                    wie möglich bei dir melden. Wir versuchen wirklich alle Nachrichten zu beantworten.
+                </p>
+                <p>
+                    Und wenn ihr uns mal live sehen wollt, schaut doch mal bei unserer <a href="../tour/" class="inline-link">Tour</a> vorbei.
+                    In unserem Shop gibt's Tickets für alle Konzerte unserer aktuellen Tour.
+                </p>
+                <div class="hero-links">
+                    <a href="#fanpost" class="link-button bg-primary">Fanpost schicken</a>
+                    <a href="../shop/" class="link-button bg-secondary">Zum Shop</a>
+                </div>
+            </div>
+            <img class="hero-image" src="../assets/kontakt/fans.webp" alt="Tausende Fans vor der Festivalbühne, Welttour letztes Jahr, Berlin">
+        </section>
+        <section id="fanpost" class="content-section">
+            <h2 class="section-head">Brief</h2>
+            <div class="section-body">
+                <form id="Fanpost-form">
                     <div id="name-div" class="input-field">
-                        <label class="name-label" class="input-label" for="name-input">
-                            <i id="name-icon">
+                        <label class="input-label" for="name-input">
+                            <img class="input-icon" src="../assets/kontakt/user-svgrepo-com.svg" alt="User Symbol">
                         </label>
                         <input id="name-input" class="input-input" required type="text" name="name" placeholder="Name *" maxlength="50">
                     </div>
-                    <div id="email-div" class="input-field">
-                        <label class="email-label" class="input-label" for="email-input">
-                            <i id="email-icon">
+                    <div id="mail-div" class="input-field">
+                        <label class="input-label" for="email-input">
+                            <img class="input-icon" src="../assets/kontakt/mail-svgrepo-com.svg" alt="Brief Symbol">
                         </label>
                         <input id="email-input" class="input-input" required type="text" name="email" placeholder="Email *" maxlength="50">
                     </div>
                     <div id="message-div" class="input-field">
-                        <label class="email-label" class="input-label" for="email-input">
-                            <i id="message-icon">
+                        <label class="input-label" for="message-textarea">
+                            <img class="input-icon" src="../assets/kontakt/message-square-lines-svgrepo-com.svg" alt="Nachricht Symbol">
                         </label>
-                        <textarea id="message-textarea" required name="message" aria-label="Nachricht" placeholder="Nachricht *"></textarea>
+                        <textarea id="message-textarea" class="input-input" required name="message" aria-label="Nachricht" placeholder="Nachricht *"></textarea>
                     </div>
-                    <div>
+                    <div id="info-div">
                         <span><b>Hinweis:</b> Felder mit * müssen aufgefüllt werden</span>
                     </div>
-                    <div>
-                        <button type="submit" id="submit-button">Nachricht senden</button>
+                    <div id="submit-div">
+                        <button type="submit" id="submit-button" class="link-button bg-primary">Nachricht senden</button>
                     </div>
                 </form>
             </div>
@@ -108,8 +129,16 @@
                         alt="Youtube Logo" height="32"></a>
             </div>
         </div>
-        <a class="inline-link" href="impressum/">Impressum</a>
+        <a class="inline-link" href="../impressum/">Impressum</a>
     </footer>
+    <div id="popup-background-filter"></div>
+    <div id="popup-container">
+        <div id="popup">
+            <h2 id="popup-head">Nachricht gesendet</h2>
+            <p id="popup-text">Vielen Dank für deine Nachricht. Wir lesen uns alle Fanpost durch und versuchen so schnell wie möglich zu antworten.</p>
+            <button id="close-popup" class="link-button bg-primary">Schließen</button>
+        </div>
+    </div>
 </body>
 
 </html>
