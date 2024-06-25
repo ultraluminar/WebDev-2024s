@@ -30,6 +30,10 @@ main{
     padding: 0;
 }
 
+#bestellungen>.section-head{
+    padding-left: 1rem;
+}
+
 #bestellungen>.section-body{
     align-items: center;
 }
