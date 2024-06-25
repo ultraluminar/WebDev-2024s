@@ -83,7 +83,7 @@ function createCartCard([id, count]){
         cart.add(product.id, 1);
         setInvoice();
     });
-    
+
     cart_card.querySelector(".cart-card-remove").addEventListener("click", () => {
         cart.delete(product.id);
         cart_card.remove();
@@ -95,18 +95,34 @@ function createCartCard([id, count]){
 }
 
 // on buy
+const close_popup_button = document.getElementById("close-popup");
+
 const popup = document.getElementById("popup");
+const popup_background_filter = document.getElementById("popup-background-filter");
+const popup_container = document.getElementById("popup-container");
 
 button_buy.addEventListener('click', () => {
     cart.clear();
     setInvoice();
     cart_card_container.innerHTML = "";
     popup.classList.add("open");
+    popup_background_filter.classList.add("open");
+    popup_container.classList.add("open");
 });
 
-popup.addEventListener("click", () => {
-    popup.classList.remove("open");
+close_popup_button.addEventListener('click', () => {
+    closePopup();
 });
+
+popup_background_filter.addEventListener("click", () => {
+    closePopup();
+});
+
+function closePopup(){
+    popup.classList.remove("open");
+    popup_background_filter.classList.remove("open");
+    popup_container.classList.remove("open");
+}
 
 // generate card-card's from order
 Object.entries(cart.order).forEach(createCartCard);
