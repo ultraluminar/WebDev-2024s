@@ -48,7 +48,7 @@ function createProductCard(product){
 
     product_card.querySelector(".spinbox-minus").addEventListener("click", () => {
         let value = parseInt(input.value);
-        if (value !== 1) input.value = value - 1; 
+        if (value !== 1) input.value = value - 1;
     });
 
     product_card.querySelector(".spinbox-plus").addEventListener("click", () => {
@@ -57,7 +57,7 @@ function createProductCard(product){
 
         input.value = (value >= max) ? max : value + 1;
     });
-    
+
     product_card.querySelector(".add-cart-button").addEventListener("click", () => {
         let value = parseInt(input.value);
         cart.add(product.id, value);
@@ -66,7 +66,7 @@ function createProductCard(product){
 
     });
 
-    
+
     cart_card_container[product.type].appendChild(product_card_clone);
     return product_card;
 }

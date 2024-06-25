@@ -20,7 +20,7 @@ header a {
     text-decoration: none;
     color: var(--text-color);
 }
-    
+
 #logo-text {
     font-family: 'Rubik Scribble', cursive;
     font-size: 2.25em;
@@ -85,7 +85,7 @@ footer p {
     top: 0;
 }
 
-#burger-menu span:nth-child(2), 
+#burger-menu span:nth-child(2),
 #burger-menu span:nth-child(3) {
     top: 0.65em;
 }

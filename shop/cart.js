@@ -17,7 +17,7 @@ export class Cart {
         }
         this.setBadge();
     }
-    
+
     setBadge() {
         this.badge.innerHTML = Object.values(this.order).reduce((a, b) => a + b, 0)
     };
@@ -44,7 +44,7 @@ export class Cart {
         this.setBadge();
         this.save();
     }
-    
+
     clear() {
         this.order = {};
         this.setBadge();
