@@ -3,6 +3,7 @@ main{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
+        "back-button"
         "orders"
         "bill";
     gap: 2em;
@@ -12,8 +13,34 @@ main{
     main{
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
+            "back-button back-button"
             "orders bill";
     }
+}
+/* Back Button */
+#back-button{
+    grid-area: back-button;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: min-content;
+    width: max-content;
+    gap: 0.3em;
+    padding: 0.5em 1em 0.5em 0.5em;
+    margin-top: -1em;
+    border-radius: 4em;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+#back-button:hover{
+    cursor: pointer;
+    background-color: var(--background-grey);
+}
+
+#back-button>img{
+    width: 1.5em;
+    height: 1.5em;
 }
 
 /* Cart Card */
