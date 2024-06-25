@@ -12,10 +12,10 @@
         <meta property="og:locale" content="de_DE">
         <meta property="og:image" content="assets/main-logo/main-logo-og.jpeg">
 
+        <script type="module" src="./nav.js"></script>
         <link rel="stylesheet" href="./shared.css">
         <link rel="stylesheet" href="./layout.css">
-
-        <script type="module" src="./nav.js"></script>
+        <link rel="stylesheet" href="./index.css">
 
         <link rel="icon" href="assets/favicon/favicon.ico" sizes="32x32">
         <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
@@ -57,7 +57,56 @@
             </ul>
         </nav>
         <main>
+            <section class="hero">
+                <div class="hero-text">
+                    <h1>KRAKATOA</h1>
+                    <p>
+                        Willkommen auf der offiziellen Webseite von Krakatoa, der Band aus Berlin, die Musik macht, die rockt.<br><br>
+                        Wir sind Krakatoa und wir sind hier, um die Welt zu rocken!<br>
+                    </p>
+                    <div class="hero-links">
+                        <a href="band/" class="link-button bg-primary">Über die Band</a>
+                        <a href="tour/" class="link-button bg-secondary">Unser Shop</a>
+                    </div>
+                </div>
+                <img class="hero-image" src="./assets/main-logo/main-logo-cutout.webp" alt="Eine schwarze Krähe fliegt über einen weiten Ozean mit einer kleinen Insel in der Ferne">
+            </section>
+            <section id="band" class="content-section">
+                <h2 class="section-head">Unsere Band</h2>
+                <div class="section-body">
+                    <p>
+                        Du hast Bock auf Musik, die rockt? Dann bist du bei uns genau richtig!
+                    </p>
+                    <p>
+                        Wenn du mehr über uns erfahren willst, über unsere Musik,
+                        unsere Geschichte und unsere Mitglieder, dann klick auf den Button unten.
+                    </p>
+                </div>
+                <div class="section-footer">
+                    <p>Infos und Fakten über uns als Band, und jeden einzelnen von uns.</p>
+                    <a href="band/" class="link-button bg-primary">Die Band</a>
+                </div>
+            </section>
+            <section id="musik" class="content-section">
+                <h2 class="section-head">Unsere Musik</h2>
+                <div class="section-body">
+                    <p>
+                        Wir machen Musik, die rockt. Unsere Songs sind voller Energie und Power.
+                        Wir lieben es, auf der Bühne zu stehen und unsere Musik mit euch zu teilen.
+                    </p>
+                    <p>
+                        Wenn du mehr über unsere Musik erfahren willst, über unsere Songs und unsere Alben,
+                        dann klick auf den Button unten.
+                    </p>
+                </div>
+                <div class="section-footer">
+                    <p>Unsere Musik, unsere Songs und unsere nächste Tour.</p>
+                    <a href="band/" class="link-button bg-secondary">Unsere Musik</a>
+                </div>
+            </section>
+            <section id="shop" class="content-section">
 
+            </section>
         </main>
         <footer>
             <p>&copy; 2024 Adrian Lösch, Lukas Klassen.<br>All rights reserved.</p>

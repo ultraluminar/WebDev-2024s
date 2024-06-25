@@ -1,0 +1,8 @@
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "hero"
+        "band"
+        "musik";
+}
