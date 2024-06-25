@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Krakatoa, Band, Musik, Rock, Heavy Metal, Elektro">
+    <meta name="description" content="Krakatoa ist die up-and-coming Band aus Berlin. Wir machen Musik, die rockt">
+
+    <meta property="og:title" content="Krakatoa - Startseite">
+    <meta property="og:description"
+        content="Krakatoa ist die up-and-coming Band aus Berlin. Wir machen Musik, die rockt">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:image" content="assets/main-logo/main-logo-og.jpeg">
+
+    <link rel="stylesheet" href="../shared.css">
+    <link rel="stylesheet" href="../layout.css">
+
+    <script type="module" src="../nav.js"></script>
+
+    <link rel="icon" href="../assets/favicon/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16.png">
+    <!-- Not veasable to turn our logo into svg -->
+    <!-- <link rel="icon" href="/icon.svg" type="image/svg+xml"> -->
+    <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png"><!-- 180×180 -->
+    <link rel="manifest" href="../assets/favicon/manifest.json">
+    <title>Krakatoa - Startseite | Offizielle Webseite unserer Band</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="."><img src="../assets/main-logo/main-logo-128.png"
+                    alt="Eine schwarze Krähe fliegt über einen weiten Ozean mit einer kleinen Insel in der Ferne"
+                    height="45"></a>
+            <a href="." id="logo-text">KRAKATOA</a>
+            <nav id="desktop-nav">
+                <ul>
+                    <li><a href=".">STARTSEITE</a></li>
+                    <li><a href="band/">DIE BAND</a></li>
+                    <li><a href="shop/">SHOP</a></li>
+                    <li><a href="tour/">TOUR</a></li>
+                </ul>
+            </nav>
+        </div>
+        <a id="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </header>
+    <div id="mobile-nav-filter"></div>
+    <nav id="mobile-side-nav">
+        <ul>
+            <li><a href=".">STARTSEITE</a></li>
+            <li><a href="band/">DIE BAND</a></li>
+            <li><a href="shop/">SHOP</a></li>
+            <li><a href="tour/">TOUR</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <div>
+                <form>
+                    <div id="name-div" class="input-field">
+                        <label class="name-label" class="input-label" for="name-input">
+                            <i id="name-icon">
+                        </label>
+                        <input id="name-input" class="input-input" required type="text" name="name" placeholder="Name *" maxlength="50">
+                    </div>
+                    <div id="email-div" class="input-field">
+                        <label class="email-label" class="input-label" for="email-input">
+                            <i id="email-icon">
+                        </label>
+                        <input id="email-input" class="input-input" required type="text" name="email" placeholder="Email *" maxlength="50">
+                    </div>
+                    <div id="message-div" class="input-field">
+                        <label class="email-label" class="input-label" for="email-input">
+                            <i id="message-icon">
+                        </label>
+                        <textarea id="message-textarea" required name="message" aria-label="Nachricht" placeholder="Nachricht *"></textarea>
+                    </div>
+                    <div>
+                        <span><b>Hinweis:</b> Felder mit * müssen aufgefüllt werden</span>
+                    </div>
+                    <div>
+                        <button type="submit" id="submit-button">Nachricht senden</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Adrian Lösch, Lukas Klassen.<br>All rights reserved.</p>
+        <div class="socials">
+            <p>Folge uns hier:</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank"><img src="../assets/footer/facebook-logo.svg"
+                        alt="Facebook Logo" height="32"></a>
+                <a href="https://www.x.com" target="_blank"><img src="../assets/footer/X-logo.svg" alt="Twitter Logo"
+                        height="32"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="../assets/footer/instagram-logo.svg"
+                        alt="Instagram Logo" height="32"></a>
+                <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img src="../assets/footer/youtube-logo.svg"
+                        alt="Youtube Logo" height="32"></a>
+            </div>
+        </div>
+        <a class="inline-link" href="impressum/">Impressum</a>
+    </footer>
+</body>
+
+</html>
