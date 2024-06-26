@@ -10,6 +10,7 @@ form.addEventListener("submit", (event) => {
     popup.classList.add("open");
     popup_background_filter.classList.add("open");
     popup_container.classList.add("open");
+    event.preventDefault();
 });
 
 close_popup_button.addEventListener('click', () => {
