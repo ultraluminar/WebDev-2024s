@@ -3,9 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="nav.js"></script>
-        <link rel="stylesheet" href="shared.css">
-        <link rel="stylesheet" href="layout.css">
+        <meta name="keywords" content="Krakatoa, Band, Musik, Rock, Heavy Metal, Elektro">
+        <meta name="description" content="Krakatoa ist die up-and-coming Band aus Berlin. Wir machen Musik, die rockt">
+
+        <meta property="og:title" content="Krakatoa - Startseite">
+        <meta property="og:description" content="Krakatoa ist die up-and-coming Band aus Berlin. Wir machen Musik, die rockt">
+        <meta property="og:type" content="article">
+        <meta property="og:locale" content="de_DE">
+        <meta property="og:image" content="assets/main-logo/main-logo-og.jpeg">
+
+        <script type="module" src="./nav.js"></script>
+        <link rel="stylesheet" href="./shared.css">
+        <link rel="stylesheet" href="./layout.css">
+        <link rel="stylesheet" href="./index.css">
+
         <link rel="icon" href="assets/favicon/favicon.ico" sizes="32x32">
         <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16.png">
@@ -13,13 +24,21 @@
         <!-- <link rel="icon" href="/icon.svg" type="image/svg+xml"> -->
         <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png"><!-- 180×180 -->
         <link rel="manifest" href="assets/favicon/manifest.json">
-        <title>Krakatoa - Startseite</title>
+        <title>Krakatoa - Startseite | Offizielle Webseite unserer Band</title>
     </head>
     <body>
         <header>
             <div>
-                <a href="."><img src="assets/main_logo/main_logo_128.png" alt="main logo" height="45"></a>
+                <a href="."><img src="assets/main-logo/main-logo-128.png" alt="Eine schwarze Krähe fliegt über einen weiten Ozean mit einer kleinen Insel in der Ferne" height="45"></a>
                 <a href="." id="logo-text">KRAKATOA</a>
+                <nav id="desktop-nav">
+                    <ul>
+                        <li><a href=".">STARTSEITE</a></li>
+                        <li><a href="band/">DIE BAND</a></li>
+                        <li><a href="shop/">SHOP</a></li>
+                        <li><a href="tour/">TOUR</a></li>
+                    </ul>
+                </nav>
             </div>
             <a id="burger-menu">
                 <span></span>
@@ -27,40 +46,113 @@
                 <span></span>
                 <span></span>
             </a>
-            <!-- <nav id="desktop-nav">
-                <ul>
-                    <li><a href="index.html">Startseite</a></li>
-                    <li><a href="index.html">Über uns</a></li>
-                    <li><a href="index.html">Kontakt</a></li>
-                    <li><a href="index.html">Impressum</a></li>
-                </ul>
-            </nav> -->
         </header>
-        <aside>
-            <nav id="mobile-side-nav">
-                <ul>
-                    <li><a href=".">STARTSEITE</a></li>
-                    <li><a href="band/">DIE BAND</a></li>
-                    <li><a href="shop/">SHOP</a></li>
-                    <li><a href="tour/">TOUR</a></li>
-                </ul>
-            </nav>
-        </aside>
+        <div id="mobile-nav-filter"></div>
+        <nav id="mobile-side-nav">
+            <ul>
+                <li><a href=".">STARTSEITE</a></li>
+                <li><a href="band/">DIE BAND</a></li>
+                <li><a href="shop/">SHOP</a></li>
+                <li><a href="tour/">TOUR</a></li>
+            </ul>
+        </nav>
         <main>
-
+            <section class="hero">
+                <div class="hero-text">
+                    <h1>KRAKATOA</h1>
+                    <p>
+                        Willkommen auf der offiziellen Webseite von Krakatoa, der Band aus Berlin, die Musik macht, die rockt.<br><br>
+                        Wir sind Krakatoa und wir sind hier, um die Welt zu rocken!<br>
+                    </p>
+                    <div class="hero-links">
+                        <a href="band/" class="link-button bg-primary">Über die Band</a>
+                        <a href="shop/" class="link-button bg-secondary">Unser Shop</a>
+                    </div>
+                </div>
+                <img class="hero-image" src="./assets/main-logo/main-logo-cutout.webp" alt="Eine schwarze Krähe fliegt über einen weiten Ozean mit einer kleinen Insel in der Ferne">
+            </section>
+            <img id="band-image" class="side-image" src="assets/band/whole_band.webp" alt="Alle vier Bandmitglieder auf der Bühne mit dem Rücken zur Kamera stehend auf ihrer letzten Tour">
+            <section id="band" class="content-section">
+                <h2 class="section-head">Unsere Band</h2>
+                <div class="section-body">
+                    <p>
+                        Du hast Bock auf Musik, die rockt? Dann bist du bei uns genau richtig!
+                    </p>
+                    <p>
+                        Wenn du mehr über uns erfahren willst, über unsere Musik,
+                        unsere Geschichte und unsere Mitglieder, dann klick auf den Button unten.
+                    </p>
+                </div>
+                <div class="section-footer">
+                    <p>Infos und Fakten über uns als Band, und jeden einzelnen von uns.</p>
+                    <a href="band/" class="link-button bg-primary">Die Band</a>
+                </div>
+            </section>
+            <img id="tour-image" class="side-image" src="assets/tour/europe-tour-hero.webp" alt="Die Band bei einem Auftritt auf einer Bühne in einer großen Stadt vor einer riesigen Menschenmenge">
+            <section id="tour" class="content-section">
+                <h2 class="section-head">Unsere Tour</h2>
+                <div class="section-body">
+                    <p>
+                        Wir sind auf Tour durch ganz Europa und kommen auch in deine Stadt! Wir rocken die Bühne und bringen die Menge zum Toben.
+                    </p>
+                    <p>
+                        Wenn du wissen willst, wann wir in deiner Nähe sind, dann klick auf den Button unten.
+                    </p>
+                </div>
+                <div class="section-footer">
+                    <p>Unsere Tourdaten und Konzerte in deiner Nähe.</p>
+                    <a href="tour/" class="link-button bg-secondary">Zur Tour</a>
+                </div>
+            </section>
+            <img id="shop-image" class="side-image" src="assets/shop/shop.webp" alt="Eine Sammlung aus Merch Artikeln aus dem Krakatoashop">
+            <section id="shop" class="content-section">
+                <h2 class="section-head">Unser Shop</h2>
+                <div class="section-body">
+                    <p>
+                        Du willst uns unterstützen und dabei noch stylisch aussehen?
+                        Dann schau in unserem Shop vorbei und hol dir coole Merchandise-Artikel von Krakatoa.
+                    </p>
+                    <p>
+                        Unsere neue Kollektion ist da! Wir haben neue T-Shirts, Hoodies, Boots und mehr.
+                        Klick auf den Button unten und entdecke unser Sortiment.
+                    </p>
+                </div>
+                <div class="section-footer">
+                    <p>Unser Shop mit coolen Merchandise-Artikeln von Krakatoa.</p>
+                    <a href="shop/" class="link-button bg-primary">Zum Shop</a>
+                </div>
+            </section>
+            <img id="fanpost-image" class="side-image" src="assets/kontakt/fans.webp" alt="Tausende Fans vor der Festivalbühne, Welttour letztes Jahr, Berlin">
+            <section id="fanpost" class="content-section">
+                <h2 class="section-head">Fanpost</h2>
+                <div class="section-body">
+                    <p>
+                        Du bist ein Fan von Krakatoa und willst uns deine Liebe zeigen?
+                        Dann schick uns Fanpost! Wir freuen uns über jede Nachricht von euch.
+                    </p>
+                    <p>
+                        Egal ob Briefe, Gedichte oder Ideen für neue Songs - wir lieben es, von euch zu hören.
+                        Klick auf den Button unten und schick uns Fanpost.
+                    </p>
+                </div>
+                <div class="section-footer">
+                    <p>Schick uns Fanpost und zeig uns deine Liebe für Krakatoa.</p>
+                    <a href="kontakt/" class="link-button bg-secondary">Fanpost schicken</a>
+                </div>
+            </section>
         </main>
         <footer>
             <p>&copy; 2024 Adrian Lösch, Lukas Klassen.<br>All rights reserved.</p>
             <div class="socials">
-                <p>Follow us:</p>
+                <p>Folge uns hier:</p>
                 <div class="social-icons">
-                    <a href="https://www.facebook.com" target="_blank"><img src="assets/footer/facebook-logo.svg" alt="facebook" height="32"></a>
-                    <a href="https://www.x.com" target="_blank"><img src="assets/footer/X-logo.svg" alt="twitter" height="32"></a>
-                    <a href="https://www.instagram.com" target="_blank"><img src="assets/footer/instagram-logo.svg" alt="instagram" height="32"></a>
-                    <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img src="assets/footer/youtube-logo.svg" alt="youtube" height="32"></a>
+                    <a href="https://www.facebook.com" target="_blank"><img src="assets/footer/facebook-logo.svg" alt="Facebook Logo" height="32"></a>
+                    <a href="https://www.x.com" target="_blank"><img src="assets/footer/X-logo.svg" alt="Twitter Logo" height="32"></a>
+                    <a href="https://www.instagram.com" target="_blank"><img src="assets/footer/instagram-logo.svg" alt="Instagram Logo" height="32"></a>
+                    <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img src="assets/footer/youtube-logo.svg" alt="Youtube Logo" height="32"></a>
                 </div>
             </div>
-            <a class="inline-link" href="impressum.html">Impressum</a>
+            <a class="inline-link" href="impressum/">Impressum</a>
         </footer>
     </body>
 </html>

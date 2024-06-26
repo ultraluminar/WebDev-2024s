@@ -1,3 +1,13 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content 1fr auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
 /* Header */
 header {
     position: sticky;
@@ -20,12 +30,13 @@ header a {
     text-decoration: none;
     color: var(--text-color);
 }
-    
+
 #logo-text {
     font-family: 'Rubik Scribble', cursive;
-    font-size: 2.25rem;
+    font-size: 2.25em;
     font-weight: bold;
     color: var(--primary-color);
+    position: relative;
 }
 
 /* Footer */
@@ -84,7 +95,7 @@ footer p {
     top: 0;
 }
 
-#burger-menu span:nth-child(2), 
+#burger-menu span:nth-child(2),
 #burger-menu span:nth-child(3) {
     top: 0.65em;
 }
@@ -115,9 +126,8 @@ footer p {
     left: 50%;
 }
 
-/* Navigation */
-/* Mobile */
-nav {
+/* Mobile Navigation */
+#mobile-side-nav {
     display: block;
     position: fixed;
     top: 0;
@@ -130,11 +140,11 @@ nav {
     transition: .3s ease-in-out;
 }
 
-nav.open {
-    width: 40%;
+#mobile-side-nav.open {
+    width: 18em;
 }
 
-nav ul {
+#mobile-side-nav ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -144,8 +154,8 @@ nav ul {
     list-style: none;
 }
 
-nav ul li a {
-    font-size: 1.5rem;
+#mobile-side-nav ul li a {
+    font-size: 1.5em;
     color: var(--text-color);
     text-decoration: none;
     white-space: nowrap;
@@ -153,12 +163,64 @@ nav ul li a {
     transition: .3s ease-in-out;
 }
 
-nav ul li a:hover {
+#mobile-side-nav ul li a:hover {
     color: var(--primary-color);
 }
 
-nav.open ul li a {
+#mobile-side-nav.open ul li a {
     opacity: 1;
 }
 
-/* TODO: Desktop */
+#mobile-nav-filter {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #00000000;
+    transition: .3s ease-in-out;
+}
+
+#mobile-nav-filter.open {
+    z-index: 1;
+    background-color: #00000075;
+}
+
+/* Desktop Navigation */
+#desktop-nav {
+    display: none;
+    gap: 1em;
+    margin-left: 1em;
+}
+
+#desktop-nav ul {
+    display: flex;
+    gap: 1em;
+    list-style: none;
+}
+
+#desktop-nav ul li a {
+    font-size: 1.25em;
+    color: var(--secondary-color-light);
+    text-decoration: none;
+}
+
+#desktop-nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Navigation Switch */
+@media screen and (min-width: 800px) {
+    #mobile-side-nav {
+        display: none;
+    }
+
+    #burger-menu {
+        display: none;
+    }
+
+    #desktop-nav {
+        display: flex;
+    }
+}

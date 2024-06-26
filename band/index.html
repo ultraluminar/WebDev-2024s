@@ -3,10 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="../nav.js"></script>
+        <meta name="keywords" content="Krakatoa, Band, Musik, Rock, Heavy Metal, Elektro">
+        <meta name="description" content="Die Krakatoa-Crew: Benni, Alex, Mia und Leo. Lerne alles über unsere Bandmitglieder.">
+
+        <meta property="og:title" content="Die Band - Krakatoa">
+        <meta property="og:description" content="Die Krakatoa-Crew: Benni, Alex, Mia und Leo. Lerne alles über unsere Bandmitglieder.">
+        <meta property="og:type" content="article">
+        <meta property="og:locale" content="de_DE">
+        <meta property="og:image" content="../assets/main-logo/main-logo-og.jpeg">
+
+        <script type="module" src="../nav.js"></script>
         <link rel="stylesheet" href="../shared.css">
         <link rel="stylesheet" href="../layout.css">
-        <link rel="stylesheet" href="../band/band.css">
+        <link rel="stylesheet" href="band.css">
+
         <link rel="icon" href="../assets/favicon.ico" sizes="32x32">
         <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16.png">
@@ -14,13 +24,21 @@
         <!-- <link rel="icon" href="/icon.svg" type="image/svg+xml"> -->
         <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png"><!-- 180×180 -->
         <link rel="manifest" href="../assets/favicon/manifest.json">
-        <title>Die Band - Krakatoa</title>
+        <title>Die Band - Krakatoa | Lerne alles über unsere Bandmitglieder</title>
     </head>
     <body>
         <header>
-            <div>
-                <a href="/"><img src="../assets/main_logo/main_logo_128.png" alt="main logo" height="45"></a>
-                <a href="/" id="logo-text">KRAKATOA</a>
+            <div id="header-logos">
+                <a href="../"><img src="../assets/main-logo/main-logo-128.png" alt="Eine schwarze Krähe fliegt über einen weiten Ozean mit einer kleinen Insel in der Ferne" height="45"></a>
+                <a href="../" id="logo-text">KRAKATOA</a>
+                <nav id="desktop-nav">
+                    <ul>
+                        <li><a href="../">STARTSEITE</a></li>
+                        <li><a href=".">DIE BAND</a></li>
+                        <li><a href="../shop/">SHOP</a></li>
+                        <li><a href="../tour/">TOUR</a></li>
+                    </ul>
+                </nav>
             </div>
             <a id="burger-menu">
                 <span></span>
@@ -28,32 +46,23 @@
                 <span></span>
                 <span></span>
             </a>
-            <!-- <nav id="desktop-nav">
-                <ul>
-                    <li><a href="index.html">Startseite</a></li>
-                    <li><a href="index.html">Über uns</a></li>
-                    <li><a href="index.html">Kontakt</a></li>
-                    <li><a href="index.html">Impressum</a></li>
-                </ul>
-            </nav> -->
         </header>
-        <aside>
-            <nav id="mobile-side-nav">
-                <ul>
-                    <li><a href="../">STARTSEITE</a></li>
-                    <li><a href=".">DIE BAND</a></li>
-                    <li><a href="../shop/">SHOP</a></li>
-                    <li><a href="../tour/">TOUR</a></li>
-                </ul>
-            </nav>
-        </aside>
+        <div id="mobile-nav-filter"></div>
+        <nav id="mobile-side-nav">
+            <ul>
+                <li><a href="../">STARTSEITE</a></li>
+                <li><a href=".">DIE BAND</a></li>
+                <li><a href="../shop/">SHOP</a></li>
+                <li><a href="../tour/">TOUR</a></li>
+            </ul>
+        </nav>
         <main>
             <section class="hero">
                 <div class="hero-text">
                     <h1>DIE BAND</h1>
                     <p>
-                        Wir sind Krakatoa, eine Band aus Berlin. 
-                        Unsere Musik ist eine Mischung aus Rock, Pop und Elektro. 
+                        Wir sind Krakatoa, eine Band aus Berlin.
+                        Unsere Musik ist eine Mischung aus Rock, Pop und Elektro.
                         Wir haben bereits mehrere Alben veröffentlicht und sind regelmäßig auf Tour.
                     </p>
                     <div class="hero-links">
@@ -61,20 +70,20 @@
                         <a href="#members" class="link-button bg-secondary">Die Bandmitglieder</a>
                     </div>
                 </div>
-                <img class="hero-image" src="../assets/band/main_logo_cutout_optimized.webp" alt="Band-logo">
+                <img class="hero-image" src="../assets/band/whole_band.webp" alt="Alle vier Bandmitglieder auf der Bühne mit dem Rücken zur Kamera stehend auf ihrer letzten Tour">
             </section>
             <section id="story" class="content-section">
                 <h2 class="section-head">Unsere Story</h2>
                 <div class="section-body">
                     <p>
-                        Wir haben uns 2018 in Berlin gegründet und sind seitdem als Band aktiv. 
-                        Unser erstes Album "Krakatoa" wurde 2020 veröffentlicht und war ein großer Erfolg. 
+                        Wir haben uns 1978 in Berlin gegründet und sind seitdem als Band aktiv.
+                        Unser erstes Album "Krakatoa" wurde 1982 veröffentlicht und war ein großer Erfolg.
                         Seitdem haben wir mehrere Alben veröffentlicht und sind regelmäßig auf Tour.
                         Wir sind stolz darauf, dass unsere Musik so viele Menschen erreicht und freuen uns auf viele weitere Jahre als Band.
                         Die Musik, die wir spielen ist unsere Leidenschaft und wir hoffen, dass wir damit auch andere Menschen begeistern können.
                     </p>
                     <p>
-                        Unsere Musik ist eine Mischung aus Rock, Metal und Elektro. 
+                        Unsere Musik ist eine Mischung aus Rock, Metal und Elektro.
                         Wir lassen uns von vielen verschiedenen Künstlern inspirieren und versuchen immer wieder neue Dinge auszuprobieren.
                         Wir hoffen, dass unsere Musik auch dich begeistern kann und freuen uns darauf, dich bei einem unserer Konzerte zu sehen.
                     </p>
@@ -86,21 +95,21 @@
             </section>
             <section id="members" class="content-section">
                 <h2 class="section-head">Die Bandmitglieder</h2>
-                <div class="section-body">
+                <div class="card-container">
                     <div class="member-card">
-                        <img class="member-card-image" src="../assets/band/Benni_card_optimized.webp" alt="Bandmitglied 1">
+                        <img class="member-card-image" src="../assets/band/benni-card.webp" alt="Benni, Sänger der Band Krakatoa an seiner Gitarre auf einer Rot-orange beleuchteten Bühne">
                         <div class="member-card-filter">
                             <h3>Benni "Feuervogel" Becker</h3>
                         </div>
                         <p class="member-card-body">
                             Benni ist unser Sänger und Frontmann.
-                            Er ist für die Texte und die Melodien in unseren Songs verantwortlich und sorgt dafür, 
-                            dass unsere Musik immer energiegeladen bleibt. Mit seiner mitreißenden Performance und 
+                            Er ist für die Texte und die Melodien in unseren Songs verantwortlich und sorgt dafür,
+                            dass unsere Musik immer energiegeladen bleibt. Mit seiner mitreißenden Performance und
                             Stimme begeistert er das Publikum bei jedem Konzert.
                         </p>
                     </div>
                     <div class="member-card">
-                        <img class="member-card-image" src="../assets/band/alex_card_optimized.webp" alt="Bandmitglied 2">
+                        <img class="member-card-image" src="../assets/band/alex-card.webp" alt="Alex, Schlagzeugspieler der Band Krakatoa hinter seinem Schlagzeug siztend auf einer Rot-orage beleuchteten Bühne">
                         <div class="member-card-filter">
                             <h3>Alex "Asche" Sturm</h3>
                         </div>
@@ -111,7 +120,7 @@
                         </p>
                     </div>
                     <div class="member-card">
-                        <img class="member-card-image" src="../assets/band/mia_card_optimized.webp" alt="Bandmitglied 3">
+                        <img class="member-card-image" src="../assets/band/mia-card.webp" alt="Mia, Bassistin der Band Krakatoa mit ihrer Bassgitarre in der Hand auf einer Rot-orange beleuchteten Bühne">
                         <div class="member-card-filter">
                             <h3>Mia "Magma" Müller</h3>
                         </div>
@@ -122,7 +131,7 @@
                         </p>
                     </div>
                     <div class="member-card">
-                        <img class="member-card-image" src="../assets/band/leo_card_optimized.webp" alt="Bandmitglied 4">
+                        <img class="member-card-image" src="../assets/band/leo-card.webp" alt="Leo, Soundtüftler der Band Krakatoa mit seiner Gitarre in der Hand auf einer Rot-orange beleuchteten Bühne">
                         <div class="member-card-filter">
                             <h3>Leo "Lava" Schneider</h3>
                         </div>
@@ -135,7 +144,7 @@
                 </div>
                 <div class="section-footer">
                     <p>
-                        Wir sind ein eingespieltes Team und verstehen uns auch abseits der Bühne sehr gut. 
+                        Wir sind ein eingespieltes Team und verstehen uns auch abseits der Bühne sehr gut.
                         Wir freuen uns darauf, auch in Zukunft gemeinsam Musik zu machen und viele Menschen damit zu begeistern.
                     </p>
                 </div>
@@ -144,15 +153,15 @@
         <footer>
             <p>&copy; 2024 Adrian Lösch, Lukas Klassen.<br>All rights reserved.</p>
             <div class="socials">
-                <p>Follow us:</p>
+                <p>Folge uns hier:</p>
                 <div class="social-icons">
-                    <a href="https://www.facebook.com" target="_blank"><img src="../assets/footer/facebook-logo.svg" alt="facebook" height="32"></a>
-                    <a href="https://www.x.com" target="_blank"><img src="../assets/footer/X-logo.svg" alt="twitter" height="32"></a>
-                    <a href="https://www.instagram.com" target="_blank"><img src="../assets/footer/instagram-logo.svg" alt="instagram" height="32"></a>
-                    <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img src="../assets/footer/youtube-logo.svg" alt="youtube" height="32"></a>
+                    <a href="https://www.facebook.com" target="_blank"><img src="../assets/footer/facebook-logo.svg" alt="Facebook Logo" height="32"></a>
+                    <a href="https://www.x.com" target="_blank"><img src="../assets/footer/X-logo.svg" alt="Twitter Logo" height="32"></a>
+                    <a href="https://www.instagram.com" target="_blank"><img src="../assets/footer/instagram-logo.svg" alt="Instagram Logo" height="32"></a>
+                    <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img src="../assets/footer/youtube-logo.svg" alt="Youtube Logo" height="32"></a>
                 </div>
             </div>
-            <a class="inline-link" href="impressum.html">Impressum</a>
+            <a class="inline-link" href="../impressum/">Impressum</a>
         </footer>
     </body>
 </html>

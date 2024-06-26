@@ -1,0 +1,23 @@
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "hero"
+        "entwickler";
+}
+
+#entwickler{
+    grid-area: entwickler;
+}
+
+.hero{
+    flex-direction: column-reverse;
+}
+
+@media screen and (min-width: 900px) {
+    #entwickler{
+        max-width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
