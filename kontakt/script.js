@@ -6,7 +6,6 @@ const popup_container = document.getElementById("popup-container");
 const close_popup_button = document.getElementById("close-popup");
 
 form.addEventListener("submit", (event) => {
-    if (!form.checkValidity()) return;
     form.reset();
     popup.classList.add("open");
     popup_background_filter.classList.add("open");
