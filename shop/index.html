@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Krakatoa, Shop, Merch, Tickets">
+        <meta name="description" content="In unserem Shop findest du coole Merchandise-Artikel und Tickets für unsere Konzerte.">
+
+        <meta property="og:title" content="Shop - Krakatoa">
+        <meta property="og:description" content="In unserem Shop findest du coole Merchandise-Artikel und Tickets für unsere Konzerte.">
+        <meta property="og:type" content="article">
+        <meta property="og:locale" content="de_DE">
+        <meta property="og:image" content="assets/main-logo/main-logo-og.jpeg">
+
+        <link rel="stylesheet" href="../shared.css">
+        <link rel="stylesheet" href="../layout.css">
+        <link rel="stylesheet" href="shop.css">
+
+        <script type="module" src="../nav.js"></script>
+        <script type="module" src="script.js"></script>
+
+        <link rel="icon" href="../assets/favicon.ico" sizes="32x32">
+        <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16.png">
+        <!-- Not veasable to turn our logo into svg -->
+        <!-- <link rel="icon" href="/icon.svg" type="image/svg+xml"> -->
+        <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png"><!-- 180×180 -->
+        <link rel="manifest" href="../assets/favicon/manifest.json">
+        <title>Shop - Krakatoa | Originales Merchandise und Tickets</title>
+    </head>
+    <body>
+        <header>
+            <div>
+                <a href="../"><img src="../assets/main-logo/main-logo-128.png" alt="Eine schwarze Krähe fliegt über einen weiten Ozean mit einer kleinen Insel in der Ferne" height="45"></a>
+                <a href="../" id="logo-text">KRAKATOA</a>
+                <nav id="desktop-nav">
+                    <ul>
+                        <li><a href="../">STARTSEITE</a></li>
+                        <li><a href="../band/">DIE BAND</a></li>
+                        <li><a href="../shop/">SHOP</a></li>
+                        <li><a href="../tour/">TOUR</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="icons">
+                <a id="cart-link" href="./cart/">
+                    <img src="../assets/shop/shopping-cart.svg" alt="Einkaufswagen Symbol">
+                    <div id="badge">
+                        0
+                    </div>
+                </a>
+                <a id="burger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+        </header>
+        <div id="mobile-nav-filter"></div>
+        <nav id="mobile-side-nav">
+            <ul>
+                <li><a href="../">STARTSEITE</a></li>
+                <li><a href="../band/">DIE BAND</a></li>
+                <li><a href="../shop/">SHOP</a></li>
+                <li><a href="../tour/">TOUR</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section class="hero">
+                <div class="hero-text">
+                    <h1>Shop</h1>
+                    <p>
+                        Willkommen in unserem Shop!<br>
+                        Hier findest du unsere Merchandise-Artikel und Tickets für unsere Konzerte.<br>
+                        Sieh dich um und lass dich inspirieren!
+                    </p>
+                    <div class="hero-links">
+                        <a href="#merch" class="link-button bg-primary">Merch</a>
+                        <a href="#tickets" class="link-button bg-secondary">Tickets</a>
+                    </div>
+                </div>
+                <img src="../assets/shop/shop.webp" alt="Eine Sammlung aus Merch Artikeln aus dem Krakatoashop" class="hero-image">
+            </section>
+            <section id="merch" class="content-section">
+                <h2 class="section-head">Merch</h2>
+                <div class="section-body card-container">
+                    <!-- insert with script -->
+                </div>
+            </section>
+            <section id="tickets" class="content-section">
+                <h2 class="section-head">Tickets</h2>
+                <div class="section-body card-container">
+                    <!-- TODO: insert with script -->
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Adrian Lösch, Lukas Klassen.<br>All rights reserved.</p>
+            <div class="socials">
+                <p>Folge uns hier:</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank"><img src="../assets/footer/facebook-logo.svg" alt="Facebook Logo" height="32"></a>
+                    <a href="https://www.x.com" target="_blank"><img src="../assets/footer/X-logo.svg" alt="Twitter Logo" height="32"></a>
+                    <a href="https://www.instagram.com" target="_blank"><img src="../assets/footer/instagram-logo.svg" alt="Instagram Logo" height="32"></a>
+                    <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img src="../assets/footer/youtube-logo.svg" alt="Youtube Logo" height="32"></a>
+                </div>
+            </div>
+            <a class="inline-link" href="../impressum/">Impressum</a>
+        </footer>
+        <template id="product-card-template">
+            <div class="product-card">
+                <img class="product-image"><!-- src, alt -->
+                <div class="product-info">
+                    <h3 class="product-title"><!-- textContent --></h3>
+                    <p class="product-description"><!-- textContent --></p>
+                    <p class="product-price"><!-- textContent --></p>
+                </div>
+                <div class="product-buttons">
+                    <div class="custom-spinbox">
+                        <button class="spinbox-button">
+                            <img src="../assets/shop/minus.svg" alt="Minus Symbol" class="spinbox-minus">
+                        </button>
+                        <input type="number" class="spinbox-input" min="0" value="1">
+                        <button class="spinbox-button">
+                            <img src="../assets/shop/plus.svg" alt="Plus Symbol" class="spinbox-plus">
+                        </button>
+                    </div>
+                    <button class="add-cart-button">In den Warenkorb</button>
+                </div>
+            </div>
+        </template>
+    </body>
+</html>

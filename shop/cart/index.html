@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Krakatoa, Shop, Merch, Tickets, Cart">
+    <meta name="description" content="Alle Artikel in deinem Warenkorb. Bestelle jetzt und erhalte deine Lieblingsartikel in wenigen Tagen.">
+
+    <meta property="og:title" content="Warenkorb - Krakatoa">
+    <meta property="og:description" content="Alle Artikel in deinem Warenkorb. Bestelle jetzt und erhalte deine Lieblingsartikel in wenigen Tagen.">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:image" content="assets/main-logo/main-logo-og.jpeg">
+
+    <link rel="stylesheet" href="../../shared.css">
+    <link rel="stylesheet" href="../../layout.css">
+    <link rel="stylesheet" href="../shop.css">
+    <link rel="stylesheet" href="cart.css">
+
+    <script type="module" src="../../nav.js"></script>
+    <script type="module" src="../cart.js"></script>
+    <script type="module" src="script.js"></script>
+
+    <link rel="icon" href="../../assets/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16.png">
+    <!-- Not veasable to turn our logo into svg -->
+    <!-- <link rel="icon" href="/icon.svg" type="image/svg+xml"> -->
+    <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png"><!-- 180×180 -->
+    <link rel="manifest" href="../../assets/favicon/manifest.json">
+    <title>Warenkorb - Krakatoa | Alle Artikel in deinem Warenkorb</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="../../"><img src="../../assets/main-logo/main-logo-128.png" alt="Eine schwarze Krähe fliegt über einen weiten Ozean mit einer kleinen Insel in der Ferne" height="45"></a>
+            <a href="../../" id="logo-text">KRAKATOA</a>
+            <nav id="desktop-nav">
+                <ul>
+                    <li><a href="../../">STARTSEITE</a></li>
+                    <li><a href="../../band/">DIE BAND</a></li>
+                    <li><a href="../../shop/">SHOP</a></li>
+                    <li><a href="../../tour/">TOUR</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="icons">
+            <a id="cart-link" href=".">
+                <img src="../../assets/shop/shopping-cart.svg" alt="Einkaufswagen Symbol">
+                <div id="badge">
+                    0
+                </div>
+            </a>
+            <a id="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </header>
+    <div id="mobile-nav-filter"></div>
+    <nav id="mobile-side-nav">
+        <ul>
+            <li><a href="../../">STARTSEITE</a></li>
+            <li><a href="../../band/">DIE BAND</a></li>
+            <li><a href="../../shop/">SHOP</a></li>
+            <li><a href="../../tour/">TOUR</a></li>
+        </ul>
+    </nav>
+    <main>
+        <a id="back-button" href="../">
+            <img src="../../assets/shop/cart/back.svg" alt="Pfeil nach links Icon">
+            <p>Zurück zum Shop</p>
+        </a>
+        <section class="content-section" id="bestellungen">
+            <h2 class="section-head">Bestellungen</h2>
+            <div class="section-body card-container">
+                <!-- Filled with javascript -->
+            </div>
+        </section>
+        <section class="content-section" id="rechnung">
+            <h2 class="section-head">Rechnung</h2>
+            <div class="section-body">
+                <div class="inner-container">
+                    <table>
+                        <tr>
+                            <td>Zwischensumme</td>
+                            <td id="sub-total-price">0,00 €</td>
+                        </tr>
+                        <tr>
+                            <td>Versandkosten</td>
+                            <td class="free-shipping">kostenlos</td>
+                        </tr>
+                        <tr>
+                            <td>Gesamtpreis</td>
+                            <td id="total-price">0,00 €</td>
+                        </tr>
+                    </table>
+                    <button id="buy-button" class="link-button bg-primary">Jetzt Kaufen</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Adrian Lösch, Lukas Klassen.<br>All rights reserved.</p>
+        <div class="socials">
+            <p>Folge uns hier:</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank"><img src="../../assets/footer/facebook-logo.svg" alt="Facebook Logo" height="32"></a>
+                <a href="https://www.x.com" target="_blank"><img src="../../assets/footer/X-logo.svg" alt="Twitter Logo" height="32"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="../../assets/footer/instagram-logo.svg" alt="Instagram Logo" height="32"></a>
+                <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img src="../../assets/footer/youtube-logo.svg" alt="Youtube Logo" height="32"></a>
+            </div>
+        </div>
+        <a class="inline-link" href="../../impressum/">Impressum</a>
+    </footer>
+    <div id="popup-background-filter"></div>
+    <div id="popup-container">
+        <div id="popup">
+            <h2>Vielen Dank für Ihre Bestellung!</h2>
+            <p>Wir haben Ihnen (k)eine Bestätigungsmail geschickt.</p>
+            <button id="close-popup" class="link-button bg-primary">Schließen</button>
+        </div>
+    </div>
+    <template id="cart-card-template">
+        <div class="cart-card">
+            <img class="cart-card-image"><!-- src, alt -->
+            <div class="cart-card-body">
+                <h3 class="cart-card-heading"><!-- textContent --></h3>
+                <p class="cart-card-price"><!-- textContent --></p>
+                <div class="custom-spinbox">
+                    <button class="spinbox-button">
+                        <img src="../../assets/shop/minus.svg" alt="Minus Symbol" class="spinbox-minus">
+                    </button>
+                    <input type="number" class="spinbox-input" min="1" value="1">
+                    <button class="spinbox-button">
+                        <img src="../../assets/shop/plus.svg" alt="Plus Symbol" class="spinbox-plus">
+                    </button>
+                </div>
+                <button class="cart-card-remove">
+                    <img src="../../assets/shop/cart/delete.svg" alt="Mülltonnen Symbol" height="30">
+                </button>
+            </div>
+        </div>
+    </template>
+</body>

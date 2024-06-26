@@ -1,0 +1,74 @@
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "hero"
+        "band-image"
+        "band"
+        "tour-image"
+        "tour"
+        "shop-image"
+        "shop"
+        "fanpost-image"
+        "fanpost";
+}
+
+@media screen and (min-width: 900px){
+    main{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "hero hero"
+            "band-image band"
+            "tour tour-image"
+            "shop-image shop"
+            "fanpost fanpost-image";
+    }
+
+    .side-image{
+        margin-bottom: 0;
+    }
+}
+
+.hero{
+    grid-area: hero;
+    margin-bottom: 3em;
+}
+
+#band-image{
+    grid-area: band-image;
+}
+
+#band{
+    grid-area: band;
+}
+
+#tour-image{
+    grid-area: tour-image;
+}
+
+#tour{
+    grid-area: tour;
+}
+
+#shop-image{
+    grid-area: shop-image;
+}
+
+#shop{
+    grid-area: shop;
+}
+
+#fanpost-image{
+    grid-area: fanpost-image;
+}
+
+#fanpost{
+    grid-area: fanpost;
+}
+
+.side-image{
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 0.75em;
+    margin-bottom: -2em;
+}
